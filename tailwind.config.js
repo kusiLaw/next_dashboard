@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,14 +8,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-      color:{
-        'default_color': '#121927',
-        'default_color_hover': '#3c414d',
-        'default_white_hover' : '#f9fbfc',
-        'default_white_border' : '#f5f5f7',
+
+      colors : {
+        'dark_color': '#121927',
+        'dark_color_hover': '#3c414d',
+        'dark_white_bg' : '#f9fbfc',
+        'dark_white_border' : '#f5f5f7',
+
         'blue_contest' : '#004de5',
-        'ash_text': '#686c7f',
-        'black_text': '#121319',
+        'light_ash_text': '#686c7f',
+        'light_black_text': '#121319',
         'gray_bg' : '#ebecf2'
        },
     },
