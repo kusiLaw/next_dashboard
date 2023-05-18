@@ -12,21 +12,24 @@ const Nav = () => {
          <h1 className='dark:text-white  '>Laky</h1>
       </div>
       <div className=''>
-         <LinkButton text = 'Home' link_path = '/'> 
+         <LinkButton text = 'Home' link_path = '/dashboard'> 
            <BiGridAlt/>
          </LinkButton>
-         <LinkButton text = 'Users' link_path= '/users'> 
+         <LinkButton text = 'Users' link_path= '/dashboard/users'> 
            <BiUser/>
          </LinkButton>
-         <LinkButton text = 'Report' link_path= '/users'> 
+         <LinkButton text = 'Report' link_path= '/dashboard/users'> 
            <BiPieChartAlt/>
          </LinkButton>
      
       </div>
       <div className=''>
-      <LinkButton text = 'Settings' link_path= '/users' > 
-           <FiSettings/>
-      </LinkButton>
+         <LinkButton text = 'Settings' link_path= '/dashboard/users' > 
+              <FiSettings/>
+         </LinkButton>
+         <LinkButton text = 'Web' link_path= '/' > 
+              <FiSettings/>
+         </LinkButton>
       </div>
       
     </nav>

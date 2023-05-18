@@ -15,17 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} dark  `}>
-        <div className="flex gap-4 bg-gray_bg dark:bg-white py-3 px-3 text-black min-h-screen ">
-           <div className='w-60 '>
-             <Nav />
-           </div>
-           <div className='w-full '>
-             <div > 
-             <Header />
-             </div>
+         <div className="">
              {children} 
-           </div>
-        </div>
+        </div> 
       </body>
     </html>
   )
