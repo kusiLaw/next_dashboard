@@ -6,7 +6,7 @@ import { FiSettings} from 'react-icons/fi';
 
 const Nav = () => {
   return (
-    <nav className='flex flex-col bg-white dark:bg-dark_color p-4 rounded-xl shadow-md  
+    <nav className='flex flex-col bg-white dark:bg-dark_color p-4 rounded-xl shadow-xl  
     h-[100vh]'>
       <div className='pb-4 mb-6 border-1 border-b h'>
          <h1 className='dark:text-white  '>Laky</h1>
@@ -27,7 +27,7 @@ const Nav = () => {
          <LinkButton text = 'Settings' link_path= '/dashboard/users' > 
               <FiSettings/>
          </LinkButton>
-         <LinkButton text = 'Web' link_path= '/' > 
+         <LinkButton text = 'View Page' link_path= '/' > 
               <FiSettings/>
          </LinkButton>
       </div>

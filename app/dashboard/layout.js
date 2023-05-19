@@ -13,8 +13,6 @@ export const metadata = {
 
 export default function DashboardLayout({ children }) {
   return (
-    // <html lang="en">
-      // <body className={`${inter.className} dark  `}>
         <div className="flex w-full gap-4 bg-gray_bg dark:bg-white py-3 px-3 text-black min-h-screen ">
            <div className='w-60 '>
              <Nav />
@@ -26,8 +24,6 @@ export default function DashboardLayout({ children }) {
                {children} 
            </div>
         </div>
-     //  </body> 
-    //</html>
   )
 }
 // 

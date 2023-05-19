@@ -1,24 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Avatar = () => {
+const Avatar = ({height, width}) => {
   return (
-    <div className=' flex items-center relative w-7 h-7 overflow-hidden  rounded-full'>
-      {/* <Image 
-       src="/profile.jpg"
-      width={88}
-      height={20}
-      alt="profile" className='rounded-full' /> */}
-      
-      <Image src="/profile.jpg"
-              alt="profile"
-              placeholder="blur" 
-              blurDataURL="/profile.jpg"
-              fill
-              style={{ objectFit: "100%"}}
-               />
+   
+       <div className={`flex ${width} ${height} items-center relative  overflow-hidden  rounded-full`}>
+         <Image src="/profile.jpg"
+                 alt="profile"
+                 // width={width}
+                 // height={height}
+                 placeholder="blur" 
+                 blurDataURL="/profile.jpg"
+                 fill
+                 // style={{ objectFit: "100%"}}
+                  />
+       
+       </div>
 
-    </div>
   )
 }
 
