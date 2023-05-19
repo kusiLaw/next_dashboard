@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
    <header className='flex  rounded-md justify-between py-2' >
-      <h1 className='flex font-black text-2xl py-2'>Dashboard</h1>
+      <h1 className='flex font-semibold text-2xl py-2 text-light_ash_text'>Dashboard</h1>
       <div className='flex relative border-2 items-center gap-4 py-1  px-4 shadow-md rounded-xl
          bg-white '> 
          <SearchInput />

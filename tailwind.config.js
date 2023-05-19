@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin'); 
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -22,5 +24,11 @@ module.exports = {
        },
     },
   },
-  plugins: [],
+  plugins: [
+   plugin(function({ addVariant }) {
+    addVariant('current', '&.active');
+   })
+
+
+  ],
 }
