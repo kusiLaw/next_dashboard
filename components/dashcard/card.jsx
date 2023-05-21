@@ -27,7 +27,7 @@ export const DashCard = ({title, icon, icon2, data, percentage }) => {
 
 
   return (
-    <div className=' flex gap-6 p-4 h-32 bg-white shadow-xl rounded-md hover:scale-[1.01] '>
+    <div className=' flex justify-between w-full p-4 h-[7.3rem] bg-white shadow-xl rounded-md hover:scale-[1.01] '>
         <div className='flex flex-col justify-between text-gray-500 '>
            {title}
              <h2 className=' text-2xl font-semibold'>
@@ -46,7 +46,7 @@ export const DashCard = ({title, icon, icon2, data, percentage }) => {
                  {GetIcons[icon2]()}
                
                  </div>
-           </div>
+         </div>
     </div>
   )
 }

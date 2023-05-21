@@ -9,7 +9,7 @@ import { HiArrowTrendingDown, HiArrowNarrowUp } from 'react-icons/hi';
 export default function Home() {
   return (
     <main >
-      <div className='flex justify-evenly my-4 ' >
+      <div className='flex justify-between gap-8 my-3 ' >
            <DashCard 
             title = 'Total Sales'
             icon = 'year_cash'
