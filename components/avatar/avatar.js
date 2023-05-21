@@ -12,7 +12,7 @@ const Avatar = ({height, width}) => {
                  placeholder="blur" 
                  blurDataURL="/profile.jpg"
                  fill
-                 // style={{ objectFit: "100%"}}
+                 style={{ objectFit: "cover"}}
                   />
        
        </div>
