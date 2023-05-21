@@ -7,7 +7,7 @@ import Settings from '../page_settings/settings';
 import { FiSettings} from 'react-icons/fi';
 
 import ProfileCard from '../profile_card/card';
-
+import Notification from '../notification/notification';
 
 const Header = () => {
   const [openSetting, setOpenSettings] = useState(false)
@@ -24,6 +24,7 @@ const Header = () => {
          <div className='' onClick={() => { setOpenProfileCard(false); setOpenSettings(true)}}>
           <FiSettings />
          </div>
+         <Notification />
          <div className='' onClick={()=>{setOpenProfileCard(!openProfileCard)}}>
              <Avatar height={'h-[1.75rem]'} width={'w-[1.75rem]'} />
          </div>

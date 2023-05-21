@@ -4,7 +4,7 @@ import Avatar from '../avatar/avatar';
 
 const ProfileCard = () => {
   return (
-   <div className='flex gap-6 absolute bg-green p-4 top-14 right-0 bg-white shadow-xl '>
+   <div className='flex gap-6 absolute bg-green p-4 top-14 right-0 bg-white shadow-xl transition-all duration-300 z-10'>
      <div className='flex w-[7rem] h-[7rem]  items-center justify-center relative border-0 hover:border-4  rounded-full'>
         <Avatar height={'h-[6rem]'} width={'w-[6rem]'} />  
      </div>
