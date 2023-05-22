@@ -12,7 +12,7 @@ import Notification from '../notification/notification';
 const Header = () => {
   const [openSetting, setOpenSettings] = useState(false)
   const [openProfileCard, setOpenProfileCard] = useState(false)
-
+  const [openMessage, setOpenMessage] = useState(false)
 
 
   return (
@@ -21,10 +21,13 @@ const Header = () => {
       <div className='flex relative border-2 items-center gap-4 py-1  px-4 shadow-md rounded-xl
          bg-white '> 
          <SearchInput />
-         <div className='' onClick={() => { setOpenProfileCard(false); setOpenSettings(true)}}>
+         <div className='' onClick={() => { 
+          setOpenProfileCard(false); 
+          // setOpenMessage(false); 
+          setOpenSettings(true)}}>
           <FiSettings />
          </div>
-         <Notification />
+         <Notification openMessage = {openMessage} />
          <div className='' onClick={()=>{setOpenProfileCard(!openProfileCard)}}>
              <Avatar height={'h-[1.75rem]'} width={'w-[1.75rem]'} />
          </div>
