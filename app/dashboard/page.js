@@ -9,8 +9,8 @@ import { HiArrowTrendingDown, HiArrowNarrowUp } from 'react-icons/hi';
 
 export default function Home() {
   return (
-    <main className='h-full ' >
-      <section className='flex justify-between gap-8 my-3 ' >
+    <main className='h-[100vh] ' >
+      <section className='grid md:grid-cols-2 xl:grid-cols-4  gap-6 my-3 ' >
            <DashCard 
             title = 'Total Sales'
             icon = 'year_cash'
@@ -42,13 +42,17 @@ export default function Home() {
             data = '16,456'
             percentage = '6'
            />
-
-          
-     
       </section>
-     <section className='h-fit overflow-y-auto'>
-      <VerticalBar />
-     </section>
+
+      <section className='grid md:grid-cols-2 h-fit overflow-y-auto'>
+        <div className='p-2 w-full'>
+           <VerticalBar />
+        </div>
+        <div className='p-2'> 
+           <VerticalBar />
+        </div>
+       
+      </section>
     </main>
   )
 }

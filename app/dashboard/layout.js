@@ -13,8 +13,8 @@ export const metadata = {
 
 export default function DashboardLayout({ children }) {
   return (
-        <div className="flex w-full gap-4 bg-gray_bg dark:bg-white py-3 px-3
-         text-black h-fit  ">
+        <div className="flex w-[100%] gap-4 bg-gray_bg dark:bg-white py-3 px-3
+         text-black h-full  ">
            <div className='w-60  '>
              <Nav />
            </div>
