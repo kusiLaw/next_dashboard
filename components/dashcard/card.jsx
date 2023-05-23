@@ -27,7 +27,8 @@ export const DashCard = ({title, icon, icon2, data, percentage }) => {
 
 
   return (
-    <div className=' flex justify-between w-full p-4 h-[7.3rem] bg-white shadow-xl rounded-xl hover:scale-[1.01] transition-all duration-300 '>
+    <div className=' flex justify-between w-full p-4 h-[7.3rem] bg-white
+     shadow-md rounded-xl hover:shadow-xl hover:scale-[1.01] transition-all duration-300 '>
         <div className='flex flex-col justify-between text-gray-500 '>
            {title}
              <h2 className=' text-2xl font-semibold'>
