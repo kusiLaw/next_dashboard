@@ -13,11 +13,12 @@ export const metadata = {
 
 export default function DashboardLayout({ children }) {
   return (
-        <div className="flex w-full gap-4 bg-gray_bg dark:bg-white py-3 px-3 text-black min-h-screen ">
-           <div className='w-60 '>
+        <div className="flex w-full gap-4 bg-gray_bg dark:bg-white py-3 px-3
+         text-black h-fit  ">
+           <div className='w-60  '>
              <Nav />
            </div>
-           <div className='w-full '>
+           <div className='w-full h-full '>
              <div > 
                <Header />
              </div> 

@@ -1,3 +1,4 @@
+import VerticalBar from '@/components/charts/verticalbar';
 import { DashCard } from '@/components/dashcard/card'
 import Image from 'next/image'
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
@@ -8,8 +9,8 @@ import { HiArrowTrendingDown, HiArrowNarrowUp } from 'react-icons/hi';
 
 export default function Home() {
   return (
-    <main >
-      <div className='flex justify-between gap-8 my-3 ' >
+    <main className='h-full ' >
+      <section className='flex justify-between gap-8 my-3 ' >
            <DashCard 
             title = 'Total Sales'
             icon = 'year_cash'
@@ -44,8 +45,10 @@ export default function Home() {
 
           
      
-      </div>
-     
+      </section>
+     <section className='h-fit overflow-y-auto'>
+      <VerticalBar />
+     </section>
     </main>
   )
 }
