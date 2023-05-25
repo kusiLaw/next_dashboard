@@ -58,7 +58,7 @@ export const data = {
 
  const VerticalBar = () => {
   return (
-   <div className='bg-white shadow-3xl'>
+   <div className='bg-white '>
      <Bar options={options} data={data} />
    </div>
     

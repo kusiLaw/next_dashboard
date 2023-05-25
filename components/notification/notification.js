@@ -5,7 +5,8 @@ import { useState } from 'react';
 
  const Notification = (props) => {
   const {openMessage = false, messages = []} = props
-  // console.log(openMessage, )
+  console.log('rendering not')
+
    const [displayMessage, setDisplayMessage] = useState(openMessage)
 
   return (

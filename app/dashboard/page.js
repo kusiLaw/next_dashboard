@@ -9,7 +9,7 @@ import { HiArrowTrendingDown, HiArrowNarrowUp } from 'react-icons/hi';
 
 export default function Home() {
   return (
-    <main className='h-[100vh] ' >
+    <main className='max-h-[100%] overflow-y-auto ' >
       <section className='grid md:grid-cols-2 xl:grid-cols-4  gap-6 my-3 ' >
            <DashCard 
             title = 'Total Sales'
@@ -44,13 +44,25 @@ export default function Home() {
            />
       </section>
 
-      <section className='grid md:grid-cols-2 h-fit overflow-y-auto'>
-        <div className='p-2 w-full'>
+      <section className='grid py-3 md:grid-cols-2 h-fit '>
+        <div className='p-2 w-full shadow-xl '>
            <VerticalBar />
         </div>
         <div className='p-2'> 
            <VerticalBar />
         </div>
+        <div className='p-2 w-full shadow-xl '>
+           <VerticalBar />
+        </div>
+        <div className='p-2'> 
+           <VerticalBar />
+        </div>
+        <div className='p-2 w-full shadow-xl '>
+           <VerticalBar />
+        </div>
+        <div className='p-2'> 
+           <VerticalBar />
+        </div> 
        
       </section>
     </main>

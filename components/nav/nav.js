@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import LinkButton from '../linkButton/linkButton'
 import { BiGridAlt, BiUser, BiPieChartAlt} from 'react-icons/bi';
 import { FiSettings} from 'react-icons/fi';
@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <nav className='flex flex-col bg-white dark:bg-dark_color p-4 rounded-xl shadow-xl  
-     h-full'>
+     h-full '>
       <div className='pb-4 mb-6 border-1 border-b h'>
          <h1 className='dark:text-white  '>Laky</h1>
       </div>

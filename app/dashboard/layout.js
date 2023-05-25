@@ -14,15 +14,21 @@ export const metadata = {
 export default function DashboardLayout({ children }) {
   return (
         <div className="flex w-[100%] gap-4 bg-gray_bg dark:bg-white py-3 px-3
-         text-black h-full  ">
-           <div className='hidden lg:block w-60  '>
-             <Nav />
-           </div>
-           <div className='w-full h-full '>
+         text-black max-h-[100vh]   ">
+           
+              <div className='hidden lg:block md:fixed md:left-3 md:top-3 w-[12rem]   lg:bottom-3'>
+                  <Nav />
+              </div>
+           
+
+           <div className='w-full lg:ml-[13rem]  '>
              <div > 
                <Header />
              </div> 
+            <div>
                {children} 
+            </div>
+               
            </div>
         </div>
   )
