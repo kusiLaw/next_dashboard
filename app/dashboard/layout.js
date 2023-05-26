@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/header/header'
 import Nav from '@/components/nav/nav'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -31,6 +30,7 @@ export default function DashboardLayout({ children }) {
                
            </div>
         </div>
+      // </Providers>
   )
 }
 // 

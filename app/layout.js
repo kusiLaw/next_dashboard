@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Header from '@/components/header/header'
-import Nav from '@/components/nav/nav'
+import { Providers } from './provider'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,13 +13,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className=''>
-      <body className={`${inter.className} dark `}>
-         <div className="  ">
-             {children} 
-        </div> 
-      </body>
-    </html>
+   
+      <html lang="en" className='' suppressHydrationWarning>
+        <body className={`${inter.className}`}>
+           <div className="  ">
+           <Providers  >
+               {children}
+           </Providers>
+          </div> 
+        </body>
+      </html>
+
+  
   )
 }
 // 
