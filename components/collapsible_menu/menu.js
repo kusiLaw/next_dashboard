@@ -1,25 +1,17 @@
 'use client'
-import React, { useState } from 'react'
-import { FiMenu } from 'react-icons/fi';
-import { AiOutlineClose } from 'react-icons/ai';
+import { useContext, useState } from 'react'
+import Hamburger from 'hamburger-react'
+import { navContext } from '@/app/dashboard/provider'
 
+export const CollapsibleMenu = () => {
 
+ const {navMount, setNavMount} = useContext(navContext)
 
-
-
-export const CollapsibleMenu = ({isOpen = false , setIsOpen}) => {
-  // const [toggle, setToggle] = useState(false)
-  console.log('rendering collapse')
+  console.log('rendering collapse',navMount)
 
   return (
-    // <div onClick={setToggle(toggle)}>
-    //   {toggle ? 
-
-    //   <AiOutlineClose/> 
-    //   : 
-
-    //   <FiMenu/>}
-    // </div>
-    <></>
+    <div className='text-md font-light'>
+      <Hamburger toggled={navMount} toggle={setNavMount}  distance="md"  label="Show menu" size={25}/>
+    </div>
   )
 }

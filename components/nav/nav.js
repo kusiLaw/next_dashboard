@@ -1,33 +1,18 @@
 'use client'
-import React, { useState, memo } from 'react'
+import React, { useState, memo, useContext } from 'react'
 import LinkButton from '../linkButton/linkButton'
 import { BiGridAlt, BiUser, BiPieChartAlt} from 'react-icons/bi';
 import { FiSettings} from 'react-icons/fi';
 import { useRef, useEffect } from 'react';
+import { navContext } from '@/app/dashboard/provider';
 
 const Nav = () => {
-  const activeRef = useRef()
-
-  const [ative, setActive] = useState('home')
-   useEffect(()=>{     console.log(activeRef.current)
-   }
-  )
-
-
- const activeStyle = (e) =>{
-    console.log(e, 'active')
-    // const collection = document.getElementsByClassName("nav");
-    // console.log(collection)
-    // collection.map(e=>{e.classList.remove('active')})
-    
-    // e.classList.add('active')
-    // redirect('dashboard/users')
- }
-
-
+ const {navMount} = useContext(navContext)
 
   return (
-    <nav className='flex flex-col bg-white dark:bg-dark_color p-4 rounded-xl shadow-xl  
+   <>
+   { !navMount &&
+     <nav className='flex flex-col bg-white dark:bg-dark_color p-4 rounded-xl shadow-xl  
      h-full '>
       <div className='pb-4 mb-6 border-1 border-b h'>
          <h1 className='dark:text-white  '>Laky</h1>
@@ -53,7 +38,9 @@ const Nav = () => {
          </LinkButton>
       </div>
       
-    </nav>
+    </nav> }
+   </>
+ 
   )
 }
 

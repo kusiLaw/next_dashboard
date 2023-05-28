@@ -1,9 +1,9 @@
+import AreaChart from '@/components/charts/areabar';
+import LineChart from '@/components/charts/linechart';
+import PieChart from '@/components/charts/piechart';
 import VerticalBar from '@/components/charts/verticalbar';
 import { DashCard } from '@/components/dashcard/card'
 import Image from 'next/image'
-import { FaRegMoneyBillAlt } from 'react-icons/fa';
-import { HiArrowTrendingDown, HiArrowNarrowUp } from 'react-icons/hi';
-
 
 
 
@@ -46,24 +46,17 @@ export default function Home() {
 
       <section className='grid py-3 md:grid-cols-2 h-fit '>
         <div className='p-2 w-full shadow-xl '>
-           <VerticalBar />
+           <AreaChart />
         </div>
         <div className='p-2'> 
            <VerticalBar />
         </div>
-        <div className='p-2 w-full shadow-xl '>
-           <VerticalBar />
+        <div className='p-2'> 
+          <LineChart />
         </div>
         <div className='p-2'> 
-           <VerticalBar />
+           <PieChart />
         </div>
-        <div className='p-2 w-full shadow-xl '>
-           <VerticalBar />
-        </div>
-        <div className='p-2'> 
-           <VerticalBar />
-        </div> 
-       
       </section>
     </main>
   )
