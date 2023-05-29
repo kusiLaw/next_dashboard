@@ -3,13 +3,11 @@ import LineChart from '@/components/charts/linechart';
 import PieChart from '@/components/charts/piechart';
 import VerticalBar from '@/components/charts/verticalbar';
 import { DashCard } from '@/components/dashcard/card'
-import Image from 'next/image'
 
-
-
+// Dashboard index page
 export default function Home() {
   return (
-    <main className='max-h-[100%] overflow-y-auto ' >
+    <main className='h-full overflow-y-auto ' >
       <section className='grid md:grid-cols-2 xl:grid-cols-4  gap-6 my-3 ' >
            <DashCard 
             title = 'Total Sales'
@@ -44,20 +42,21 @@ export default function Home() {
            />
       </section>
 
-      <section className='grid py-3 md:grid-cols-2 h-fit '>
-        <div className='p-2 w-full shadow-xl '>
+      <section className='grid py-3 gap-3 md:grid-cols-2 h-fit '>
+        <div className='p-2 w-full h-fit shadow-xl bg-white hover:scale-[1.01] duration-500'>
            <AreaChart />
         </div>
-        <div className='p-2'> 
+         <div className='p-2 w-full h-fit shadow-xl bg-white hover:scale-[1.01] duration-500'> 
            <VerticalBar />
         </div>
-        <div className='p-2'> 
+        <div className='p-2 w-full h-fit shadow-xl bg-white hover:scale-[1.01] duration-500'> 
           <LineChart />
         </div>
-        <div className='p-2'> 
+        <div className='p-2 w-full h-fit shadow-xl  bg-white hover:scale-[1.01] duration-500'> 
            <PieChart />
-        </div>
+        </div> 
       </section>
     </main>
+
   )
 }

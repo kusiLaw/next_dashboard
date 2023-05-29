@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
    <header className='flex flex-col mb-3 md:mb-0 md:flex-row  rounded-md justify-between py-2' >
-      <h1 className='flex font-semibold text-2xl py-2 text-light_ash_text'>{getHeaderName()}</h1>
+      <h1 className='flex text-2xl py-2 text-light_ash_text'>{getHeaderName()}</h1>
       <div className=' flex flex-col md:flex-row self-end border-0 md:border-2 items-center gap-4 py-1  px-4 
               md:shadow-md rounded-xl
          bg-white '> 
@@ -27,18 +27,15 @@ const Header = () => {
           </div>
           <div className='flex order-0 md:order-1 items-center gap-4 self-end p-2 md:p-0 
            border-2 rounded-lg px-4 md:px-0 md:border-0 '>
-                <PageConfiguration />
-            
+               <PageConfiguration />
                <CollapsibleMenu  />
                <Notification  />
                <div className='relative '>
                  <Profile />
                </div>
-          </div>
-      
-         
+          </div>  
       </div>
-      {/* {openSetting && <Settings  setOpenSettings= {setOpenSettings} /> } */}
+    
    </header>
   )
 }

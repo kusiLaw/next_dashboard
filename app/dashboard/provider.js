@@ -1,10 +1,20 @@
 'use client'
 import { createContext, useState } from 'react'
 
-export const navContext = createContext()
+// All shared data use by dashboard only should be here ..
 
-export function CustomProviders({ children }) {
- const [navMount, setNavMount]  = useState(false)
+export const navToggleContext = createContext()
+// export const navCollapseContext = createContext()
 
- return <navContext.Provider value={{navMount, setNavMount}}>{children}</navContext.Provider>
+
+export function DashboardProvider({ children }) {
+
+ const [navMount, setNavMount]  = useState(true) 
+
+
+ return (
+ <navToggleContext.Provider value={{navMount, setNavMount}}>
+    {children}
+ </navToggleContext.Provider>
+ )
 }
