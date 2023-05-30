@@ -1,16 +1,21 @@
 import { useRef } from "react"
 
 const SelectInput = (props) => {
-  const {text, name, setTheme, defaultInput = '', options = []} = props
+  const {text, name, onchangeFunc = null , defaultInput = '', options = []} = props
 
-   console.log(defaultInput)
+   // console.log(defaultInput)
    return (
    <label className='font-semibold'>
     {text} : 
    <select  name={name} className='ml-5 p-2 border-0 font-normal active:border-0 bg-white dark:bg-white rounded-sm' 
-   onChange={e => {setTheme(e.target.value)}}  
-   // defaultValue = {defaultInput}
-   defaultValue="DarkLight"
+       onChange={e => {
+            onchangeFunc !== null &&
+            onchangeFunc(e.target.value)
+        } } 
+
+       defaultValue = {
+        defaultInput 
+       }
    >
      {options.map(el =>(
       <option className='hover:bg-blue_contest dark:hover:bg-blue_contest' 

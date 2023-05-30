@@ -1,7 +1,5 @@
-
 "use client"
 
-import React from 'react';
 import {
  Chart as ChartJS,
  CategoryScale,
@@ -76,14 +74,14 @@ export const data = {
 
 
  const AreaChart = ( ) => {
-
-
-
-
   const  dataset = data.datasets[0].label
-  console.log(dataset)
+ 
+  console.log({
+   ...data,
+   ...data.datasets
+  })
   return (
-   <div className='bg-white '>
+   <div className='bg-white ' >
      <Line options={options} data={data} width={100} height={60} />
    </div>
     

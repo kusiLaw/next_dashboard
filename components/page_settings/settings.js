@@ -1,17 +1,12 @@
 
-import {useState} from 'react'
-import SelectInput from '../selectInput/selectInput'
 import { AiOutlineClose} from 'react-icons/ai';
-import { useTheme } from 'next-themes'
+import { useTheme } from 'next-themes';
+import ThemePicker from './themepicker';
 
 
 
 const Settings = ({setOpenSettings}) => {
   const { theme, setTheme } = useTheme()
-  const defaultInput = {
-   'light': 'Default',
-   'dark': 'DarkLight'
-  }
 
   
   return (
@@ -23,13 +18,7 @@ const Settings = ({setOpenSettings}) => {
         </div>
       </div>
       <div className='mt-8'>
-           <SelectInput 
-           text='Theme ' 
-           name = 'theme'
-           options={[['Default', 'light'], ['DarkLight', 'dark']]} 
-            setTheme = {setTheme} 
-            defaultInput = {defaultInput[theme]}
-           />
+           <ThemePicker theme={theme} setTheme={setTheme} />
       </div>
     </div>
   )
