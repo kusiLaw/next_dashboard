@@ -5,11 +5,10 @@ import { toggleBtnContext } from '@/app/dashboard/provider'
 
 const ToggleButtonController = ({}) => {
   const {displayToggleBtn, setDisplayToggleBtn } = useContext(toggleBtnContext)
-  // console.log(displayToggleBtn, 'display tog ')
-
+ 
   return (
-    <div onClick={()=> {setDisplayToggleBtn(!displayToggleBtn)}}>
-      <ToggleSwitch name = {'Enable Nav Button'}  checked = {displayToggleBtn} onChangeFn ={setDisplayToggleBtn} />
+    <div >
+      <ToggleSwitch name = {'Toggle Button'}  checked = {displayToggleBtn} onChangeFn ={setDisplayToggleBtn} />
     </div>
   )
 }

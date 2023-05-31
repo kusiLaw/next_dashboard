@@ -18,7 +18,7 @@ const Settings = ({setOpenSettings}) => {
           <AiOutlineClose />
         </div>
       </div>
-      <div className='mt-8'>
+      <div className='flex flex-col gap-4 mt-8 w-full'>
            <ThemePicker theme={theme} setTheme={setTheme} />
            <ToggleButtonController />
       </div>

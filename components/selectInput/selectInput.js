@@ -13,9 +13,8 @@ const SelectInput = (props) => {
             onchangeFunc(e.target.value)
         } } 
 
-       defaultValue = {
-        defaultInput 
-       }
+
+
    >
      {options.map(el =>(
       <option className='hover:bg-blue_contest dark:hover:bg-blue_contest' 
