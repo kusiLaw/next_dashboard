@@ -2,6 +2,7 @@
 import { AiOutlineClose} from 'react-icons/ai';
 import { useTheme } from 'next-themes';
 import ThemePicker from './themepicker';
+import ToggleButtonController from './toggleBtnController';
 
 
 
@@ -19,6 +20,7 @@ const Settings = ({setOpenSettings}) => {
       </div>
       <div className='mt-8'>
            <ThemePicker theme={theme} setTheme={setTheme} />
+           <ToggleButtonController />
       </div>
     </div>
   )

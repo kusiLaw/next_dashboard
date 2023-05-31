@@ -1,15 +1,19 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import SearchInput from '../searchinput/search_input'
 import { usePathname } from 'next/navigation';
 import Notification from '../notification/notification';
 import { CollapsibleMenu } from '../collapsible_menu/menu';
 import Profile from '../profile/profile';
 import PageConfiguration from '../page_settings/configure';
+import { toggleBtnContext } from '@/app/dashboard/provider'
+
+
 
 const Header = () => {
  const pathname = usePathname();
+ const {displayToggleBtn } = useContext(toggleBtnContext)
 
   const getHeaderName  = () => {
      const name =  pathname.split('/').pop()
@@ -28,7 +32,7 @@ const Header = () => {
           <div className='flex order-0 md:order-1 items-center gap-4 self-end p-2 md:p-0 
            border-2 rounded-lg px-4 md:px-0 md:border-0 '>
                <PageConfiguration />
-               <CollapsibleMenu  />
+               {displayToggleBtn && <CollapsibleMenu  />}
                <Notification  />
                <div className='relative '>
                  <Profile />
