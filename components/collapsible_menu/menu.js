@@ -3,11 +3,11 @@ import { useContext, useState } from 'react'
 import Hamburger from 'hamburger-react'
 // import { navContext } from '@/app/dashboard/provider'
 // import { navToggleContext } from '@/app/provider'
-import { navToggleContext } from '@/app/dashboard/provider'
+import { navMountContext } from '@/app/dashboard/provider'
 
 export const CollapsibleMenu = () => {
 
- const {navMount, setNavMount} = useContext(navToggleContext)
+ const {navMount, setNavMount} = useContext(navMountContext)
 
 
   console.log('rendering collapse',navMount)
