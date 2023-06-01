@@ -2,9 +2,10 @@
 import React, { useState, useContext } from 'react'
 import LinkButton from '../linkButton/linkButton'
 import { BiGridAlt, BiUser, BiPieChartAlt} from 'react-icons/bi';
-import { FiSettings, FiArrowLeft,FiArrowRight} from 'react-icons/fi';
+import { FiSettings} from 'react-icons/fi';
 import { BiCollapse, BiExpand } from 'react-icons/bi';
 import { navControllerButtonContext } from '@/app/dashboard/provider';
+import { FaGlobeAfrica} from 'react-icons/fa';
 
 // import { navContext } from '@/app/dashboard/provider';
 
@@ -47,7 +48,7 @@ const Nav = ({navCollapse, setNavCollapse}) => {
               <FiSettings/> {navCollapse  ? '' : 'Settings' }
          </LinkButton>
          <LinkButton t link_path= '/' > 
-              <FiSettings/>{navCollapse  ? '' : 'View Page' } 
+              <FaGlobeAfrica/>{navCollapse  ? '' : 'View Page' } 
          </LinkButton>
       </div>
       

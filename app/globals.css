@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+.w{
+ color:rgba(235, 37, 175, 0.5)
+}

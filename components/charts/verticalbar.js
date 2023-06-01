@@ -46,7 +46,7 @@ export const data = {
     },
     {
       label: 'Dataset 2',
-      data: [23, 16, 10 ,4, 5, 6, 7,  13, 14, 9, 10, 13],
+      data: [23, 16, 10 ,15, 25, 46, 57,  43, 44, 50, 60, 63],
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
   ],

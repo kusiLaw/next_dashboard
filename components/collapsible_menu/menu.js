@@ -1,8 +1,6 @@
 'use client'
 import { useContext, useState } from 'react'
 import Hamburger from 'hamburger-react'
-// import { navContext } from '@/app/dashboard/provider'
-// import { navToggleContext } from '@/app/provider'
 import { navMountContext } from '@/app/dashboard/provider'
 
 export const CollapsibleMenu = () => {
@@ -21,7 +19,7 @@ export const CollapsibleMenu = () => {
         }else{
          setNavMount(true)
         }
-      }}  distance="md"  label="Show menu" size={25}/>
+      }}  distance="md"  label="Show menu" size={23} />
     </div>
   )
 }
