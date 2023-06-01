@@ -1,7 +1,5 @@
 "use client"
-import { useContext, useEffect, useRef } from 'react';
-import { navMountContext } from '@/app/dashboard/provider';
-import { navCollapseContext } from '@/app/dashboard/provider';
+import { useChartResponsive } from '@/hooks/responsive';
 
 import {
   Chart as ChartJS,
@@ -57,15 +55,7 @@ export const data = {
 };
 
 const VerticalBar = ( ) => {
- const {navMount} = useContext(navMountContext)
- const {navCollapse} = useContext(navCollapseContext)
- const resizeRef = useRef(null)
- 
- useEffect(()=>{ 
-  resizeRef.current.resize()
- }, 
-  [navMount,navCollapse])
-
+ const [resizeRef ] = useChartResponsive()
 
   return <Bar options={options} data={data} width={100} height={60} ref={resizeRef} />;
 }

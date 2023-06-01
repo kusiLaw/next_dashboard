@@ -1,10 +1,6 @@
-
 "use client"
 
-import { useContext, useEffect, useRef } from 'react';
-import { navMountContext } from '@/app/dashboard/provider';
-import { navCollapseContext } from '@/app/dashboard/provider';
-
+import { useChartResponsive } from '@/hooks/responsive';
 
 import {
  Chart as ChartJS,
@@ -82,14 +78,7 @@ export const data = {
 
  const LineChart = ( ) => {
 
-  const {navMount} = useContext(navMountContext)
-  const {navCollapse} = useContext(navCollapseContext)
-  const resizeRef = useRef(null)
-  
-  useEffect(()=>{ 
-   resizeRef.current.resize()
-  }, 
-   [navMount, navCollapse])
+  const [resizeRef ] = useChartResponsive()
 
   return (
    <div className='bg-white '>
