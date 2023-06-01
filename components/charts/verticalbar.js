@@ -1,4 +1,8 @@
 "use client"
+import { useContext, useEffect, useRef } from 'react';
+import { navMountContext } from '@/app/dashboard/provider';
+import { navCollapseContext } from '@/app/dashboard/provider';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -53,7 +57,17 @@ export const data = {
 };
 
 const VerticalBar = ( ) => {
-  return <Bar options={options} data={data} width={100} height={60} />;
+ const {navMount} = useContext(navMountContext)
+ const {navCollapse} = useContext(navCollapseContext)
+ const resizeRef = useRef(null)
+ 
+ useEffect(()=>{ 
+  resizeRef.current.resize()
+ }, 
+  [navMount,navCollapse])
+
+
+  return <Bar options={options} data={data} width={100} height={60} ref={resizeRef} />;
 }
 
 

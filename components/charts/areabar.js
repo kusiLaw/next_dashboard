@@ -1,4 +1,8 @@
 "use client"
+import { useContext, useEffect, useRef } from 'react';
+import { navMountContext } from '@/app/dashboard/provider';
+import { navCollapseContext } from '@/app/dashboard/provider';
+
 
 import {
  Chart as ChartJS,
@@ -66,23 +70,25 @@ export const data = {
       // backgroundColor: 'rgba(255, 99, 132, 0.5)',
       borderColor: 'rgb(53, 162, 235)',
       fill: true,
-
-
     },
   ],
 };
 
 
  const AreaChart = ( ) => {
-  const  dataset = data.datasets[0].label
- 
-  console.log({
-   ...data,
-   ...data.datasets
-  })
+
+  const {navMount} = useContext(navMountContext)
+  const {navCollapse} = useContext(navCollapseContext)
+  const resizeRef = useRef(null)
+  
+  useEffect(()=>{ 
+   resizeRef.current.resize()
+  }, 
+   [navMount, navCollapse])
+
   return (
-   <div className='bg-white ' >
-     <Line options={options} data={data} width={100} height={60} />
+   <div className='bg-white w-full' >
+     <Line options={options} data={data} width={100} height={60} updateMode={"resize"} ref={resizeRef}/>
    </div>
     
   )

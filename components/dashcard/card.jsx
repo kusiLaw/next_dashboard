@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, forwardRef } from 'react';
 import { FaRegMoneyBillAlt } from 'react-icons/fa';
 import { HiArrowNarrowDown, HiArrowNarrowUp } from 'react-icons/hi';
 import { BsCartPlus } from 'react-icons/bs';
@@ -6,7 +6,7 @@ import { BsCartPlus } from 'react-icons/bs';
 import { AiFillBank,AiOutlineStock } from 'react-icons/ai';
 
 
-export const DashCard = ({title, icon, icon2, data, percentage }) => {
+export const DashCard = forwardRef(({title, icon, icon2, data, percentage }, ref) => {
  // console.log(redering )
  const GetIcons = {
   cash: () =>( <FaRegMoneyBillAlt/>),
@@ -28,7 +28,7 @@ export const DashCard = ({title, icon, icon2, data, percentage }) => {
 
 
   return (
-    <div className=' flex justify-between w-full p-3 h-[7rem] bg-white
+    <div ref={ref} className=' flex justify-between w-full p-3 h-[7rem] bg-white
      shadow-md rounded-xl hover:shadow-xl hover:scale-[1.01] transition-all duration-300 '>
         <div className='flex flex-col justify-between text-gray-500 '>
            {title}
@@ -52,4 +52,4 @@ export const DashCard = ({title, icon, icon2, data, percentage }) => {
     </div>
   )
 
-}
+})

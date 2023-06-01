@@ -1,7 +1,11 @@
 
 "use client"
 
-import React from 'react';
+import { useContext, useEffect, useRef } from 'react';
+import { navMountContext } from '@/app/dashboard/provider';
+import { navCollapseContext } from '@/app/dashboard/provider';
+
+
 import {
  Chart as ChartJS,
  CategoryScale,
@@ -78,14 +82,18 @@ export const data = {
 
  const LineChart = ( ) => {
 
+  const {navMount} = useContext(navMountContext)
+  const {navCollapse} = useContext(navCollapseContext)
+  const resizeRef = useRef(null)
+  
+  useEffect(()=>{ 
+   resizeRef.current.resize()
+  }, 
+   [navMount, navCollapse])
 
-
-
-  const  dataset = data.datasets[0].label
-  console.log(dataset)
   return (
    <div className='bg-white '>
-     <Line options={options} data={data} width={100} height={60} />
+     <Line options={options} data={data} width={100} height={60} ref={resizeRef} />
    </div>
     
   )

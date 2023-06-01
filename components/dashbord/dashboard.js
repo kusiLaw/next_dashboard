@@ -4,12 +4,12 @@ import Nav from '@/components/nav/nav'
 import Header from '@/components/header/header'
 import { useContext, useEffect, useState } from 'react'
 import { navMountContext } from '@/app/dashboard/provider'
-
+import { navCollapseContext } from '@/app/dashboard/provider'
 
 
 const DashBoard = ({children}) => {
   const {navMount} = useContext(navMountContext)
-  const [navCollapse, setNavCollapse] = useState(false)
+  const {navCollapse, setNavCollapse} = useContext(navCollapseContext)
  
   const layout = () => {
     if (window.innerWidth < 768){
