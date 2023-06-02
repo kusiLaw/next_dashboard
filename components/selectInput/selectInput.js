@@ -8,16 +8,16 @@ const SelectInput = (props) => {
    <label className='font-semibold'>
     {text} : 
    <select  name={name} className='ml-5 p-2 border-0 font-normal active:border-0 bg-white dark:bg-white rounded-sm' 
+       // value={defaultInput}
+       
        onChange={e => {
             onchangeFunc !== null &&
             onchangeFunc(e.target.value)
         } } 
 
-
-
    >
      {options.map(el =>(
-      <option className='hover:bg-blue_contest dark:hover:bg-blue_contest' 
+      <option key={Array.isArray(el) ? el[1] : el } className='hover:bg-blue_contest dark:hover:bg-blue_contest' 
       value={Array.isArray(el) ? el[1] : el }>{Array.isArray(el) ? el[0] : el }</option>
      ))}
    </select>

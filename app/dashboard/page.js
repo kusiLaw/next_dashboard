@@ -56,7 +56,7 @@ export default function Home() {
         <div className='p-2 w-full h-fit shadow-xl bg-white  duration-500'> 
           <LineChart />
         </div>
-        <div className='p-2 w-full h-fit shadow-xl  bg-white  duration-500'> 
+        <div className='relative p-2 w-full h-fit shadow-xl  bg-white  duration-500'> 
            {/* <PieChart /> */}
            <Doughnuts />
         </div> 

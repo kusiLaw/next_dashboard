@@ -20,7 +20,7 @@ export const CollapsibleMenu = () => {
          setNavMount(true)
          storeUserDefaultSettings('navMount',true) 
         }
-      }}  distance="md"  label="Show menu" size={23} />
+      }}  distance="sm"  label="Show menu" size={23} className="first:text-md font-normal" />
     </div>
   )
 }

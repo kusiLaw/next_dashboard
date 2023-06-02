@@ -1,4 +1,3 @@
-import React from 'react'
 import { storeUserDefaultSettings } from '@/utils/localStorage'
 
 const ToggleSwitch = ({onChangeFn = null, name = '', checked = false, cache = false, extra = {}}) => {
@@ -27,7 +26,7 @@ const ToggleSwitch = ({onChangeFn = null, name = '', checked = false, cache = fa
           hover:before:shadow-lg
           
           checked:before:translate-x-full checked:before:bg-blue_contest dark:checked:before:bg-dark_color
-           transition ease-linear duration-500
+           transition-all ease-linear duration-1000
           ' />
      </label>
     </>

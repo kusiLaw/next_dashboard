@@ -16,9 +16,9 @@ const Nav = ({navCollapse, setNavCollapse}) => {
   return (
 
      <nav className={`flex flex-col ${navCollapse ? `w-[4rem]`:`w-[12rem]`} dark:text-white   bg-white dark:bg-dark_color p-4 rounded-xl shadow-xl  
-     h-full `}>
-      <div className='flex flex-col gap-3  pb-4 mb-6 border-1 border-b h'>
-        { displayNavControllerButton && <div className='flex w-full justify-between  dark:text-white '>
+     h-full`}>
+      <div className='flex flex-col gap-3  pb-4 mb-6 border-1 border-b transition duration-1000'>
+        { displayNavControllerButton && <div className='flex w-full justify-between  dark:text-white animate-fadeIn'>
              <div onClick={() => { 
                      setNavCollapse(false)
                      storeUserDefaultSettings('navCollapse', false)

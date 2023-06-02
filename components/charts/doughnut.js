@@ -1,4 +1,4 @@
-import React from 'react';
+import { useChartResponsive } from '@/hooks/responsive';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
@@ -64,7 +64,9 @@ export const options = {
 };
 
 const Doughnuts = () => {
-  return <Doughnut data={data} options={options} width={100} height={60} />;
+   const [resizeRef ] = useChartResponsive()
+
+  return <Doughnut data={data} options={options} width={100} height={10} updateMode={"resize"} ref={resizeRef} />;
 }
 
 

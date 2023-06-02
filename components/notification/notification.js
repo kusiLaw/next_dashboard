@@ -17,7 +17,7 @@ import { useState } from 'react';
        {displayMessage && <div className='absolute top-8 text-center
          text-md font-normal w-fit px-4 py-2 z-10 shadow-lg right-0  bg-white duration-500'>
        {messages.length > 0 ? 
-        messages.map((message)=> <div>{message}</div>) : 
+        messages.map((message)=> <div key={message}>{message}</div>) : 
        <span className='block w-40'>{'No message'}</span>}
        </div>}
     </div>

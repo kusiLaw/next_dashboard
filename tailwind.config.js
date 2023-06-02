@@ -22,6 +22,22 @@ module.exports = {
         'light_black_text': '#121319',
         'gray_bg' : '#ebecf2'
        },
+
+       keyframes: {
+        fadeIn: {
+         'from': {opacity: '0'  },
+         'to': {opacity: '1' },
+        },
+        slideIn: {
+         'from': { width: '0%' },
+         'to': { width: 'content-fit' }
+       }
+      },
+
+      animation: {
+       slideIn: 'slideIn 800ms  ',
+       fadeIn: 'fadeIn 800ms  ',
+     }
     },
   },
   plugins: [

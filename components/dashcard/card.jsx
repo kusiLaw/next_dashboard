@@ -53,3 +53,5 @@ export const DashCard = forwardRef(({title, icon, icon2, data, percentage }, ref
   )
 
 })
+
+DashCard.displayName = "DashCard";

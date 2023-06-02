@@ -30,10 +30,10 @@ const Header = () => {
              <SearchInput />
           </div>
           <div className='flex order-0 md:order-1 items-center gap-4 self-end p-2 md:p-0 
-           border-2 rounded-lg px-4 md:px-0 md:border-0 '>
+           border-2 rounded-lg px-4 md:px-0 md:border-0'>
                <PageConfiguration />
                {displayToggleBtn && <CollapsibleMenu  />}
-               <Notification  />
+               <Notification  messages = {[]}/>
                <div className='relative '>
                  <Profile />
                </div>
