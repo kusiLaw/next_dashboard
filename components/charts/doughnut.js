@@ -33,10 +33,39 @@ export const data = {
   ],
 };
 
+export const options = {
+ responsive: true,
+ plugins: {
+   legend: {
+     position: 'top',
+   },
+   title: {
+     display: true,
+     text: 'Total Sales',
+     font: {
+      size : 18
+     }
+   },
+ },
+ elements:{
+  line:{
+   tension: 0,
+   borderWidth: 1,
 
-const Doughnut = () => {
-  return <Doughnut data={data} />;
+     // borderColor: 'lightblue',
+   // fill: 'start',
+   backgroundColor: '#0dd2f9'
+  }
+ },
+ point: {
+  radius : 20,
+  hitRadius : 30
+ }
+};
+
+const Doughnuts = () => {
+  return <Doughnut data={data} options={options} width={100} height={60} />;
 }
 
 
-export default Doughnut
+export default Doughnuts

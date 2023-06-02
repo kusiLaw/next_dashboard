@@ -2,22 +2,23 @@
 import { useContext, useState } from 'react'
 import Hamburger from 'hamburger-react'
 import { navMountContext } from '@/app/dashboard/provider'
+import { storeUserDefaultSettings } from '@/utils/localStorage'
 
 export const CollapsibleMenu = () => {
 
  const {navMount, setNavMount} = useContext(navMountContext)
 
 
-  console.log('rendering collapse',navMount)
 
   return (
     <div className='text-md font-light'>
-      <Hamburger  onToggle={ (toggled) => {
+      <Hamburger toggled ={!navMount}  onToggle={ (toggled) => {
         if(toggled){
          setNavMount(false)
-          
+         storeUserDefaultSettings('navMount', false) 
         }else{
          setNavMount(true)
+         storeUserDefaultSettings('navMount',true) 
         }
       }}  distance="md"  label="Show menu" size={23} />
     </div>

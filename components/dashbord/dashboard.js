@@ -11,6 +11,8 @@ const DashBoard = ({children}) => {
   const {navMount} = useContext(navMountContext)
   const {navCollapse, setNavCollapse} = useContext(navCollapseContext)
  
+  console.log('navMount?', navMount)
+  
   const layout = () => {
     if (window.innerWidth < 768){
       return(

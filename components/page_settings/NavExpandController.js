@@ -8,7 +8,12 @@ const NavExpandController = () => {
 
  return (
   <div >
-    <ToggleSwitch name = {'Nav Controller'}  checked = {displayNavControllerButton} onChangeFn ={setNavControllerButton} />
+    <ToggleSwitch 
+    name = {'Nav Controller'}  
+    checked = {displayNavControllerButton} 
+    onChangeFn ={setNavControllerButton} 
+    extra = {{cache : true, storageKey : 'displayNavControllerButton'}}
+    />
   </div>
 )
 

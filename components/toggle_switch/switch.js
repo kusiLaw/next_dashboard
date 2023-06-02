@@ -1,12 +1,18 @@
 import React from 'react'
+import { storeUserDefaultSettings } from '@/utils/localStorage'
 
-const ToggleSwitch = ({onChangeFn = null, name = '', checked = false}) => {
-
+const ToggleSwitch = ({onChangeFn = null, name = '', checked = false, cache = false, extra = {}}) => {
+  
   return (
     <>
        <label className='flex justify-between w-full relative self-start'>
            <span className='font-semibold'>{ name }</span>
-         <input onChange={()=> onChangeFn !== null && onChangeFn(!checked)}  
+         <input onChange={()=>{ 
+          if (onChangeFn !== null) {
+           onChangeFn(!checked)
+           extra.cache && storeUserDefaultSettings(extra.storageKey , !checked)
+          }
+          }}  
           type="checkbox" checked={checked} 
           className='relative h-6 w-12 cursor-pointer appearance-none rounded-full bg-gray_bg 
           

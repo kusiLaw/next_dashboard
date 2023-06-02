@@ -4,21 +4,11 @@ import LineChart from '@/components/charts/linechart';
 import PieChart from '@/components/charts/piechart';
 import VerticalBar from '@/components/charts/verticalbar';
 import { DashCard } from '@/components/dashcard/card'
-import { useContext, useEffect, useRef } from 'react';
-import { Doughnut } from 'react-chartjs-2';
-
-import { navMountContext } from './provider';
-
-
+import Doughnuts from '@/components/charts/doughnut';
 
 // Dashboard index page
 export default function Home() {
- // const {navMount, setNavMount} = useContext(navMountContext)
- // const resizeRef = useRef(null)
 
- const dushRef = useRef(null)
-
-  // useEffect(()=>{console.log('effect loading',   resizeRef)}, [navMount])
 
   return (
     <main className='h-full overflow-y-auto ' >
@@ -29,7 +19,6 @@ export default function Home() {
             icon2 ='up'
             data = '123 M'
             percentage = '12'
-            ref ={dushRef}
            />
             
             <DashCard 
@@ -68,8 +57,8 @@ export default function Home() {
           <LineChart />
         </div>
         <div className='p-2 w-full h-fit shadow-xl  bg-white  duration-500'> 
-           <PieChart />
-           {/* <Doughnut /> */}
+           {/* <PieChart /> */}
+           <Doughnuts />
         </div> 
       </section>
     </main>

@@ -6,7 +6,7 @@ import { FiSettings} from 'react-icons/fi';
 import { BiCollapse, BiExpand } from 'react-icons/bi';
 import { navControllerButtonContext } from '@/app/dashboard/provider';
 import { FaGlobeAfrica} from 'react-icons/fa';
-
+import { storeUserDefaultSettings } from '@/utils/localStorage';
 // import { navContext } from '@/app/dashboard/provider';
 
 const Nav = ({navCollapse, setNavCollapse}) => {
@@ -19,11 +19,19 @@ const Nav = ({navCollapse, setNavCollapse}) => {
      h-full `}>
       <div className='flex flex-col gap-3  pb-4 mb-6 border-1 border-b h'>
         { displayNavControllerButton && <div className='flex w-full justify-between  dark:text-white '>
-             <div onClick={() => { setNavCollapse(false)}} className={` ${navCollapse ?  ``: `hidden`} flex ml-1  	 text-xl`}>
+             <div onClick={() => { 
+                     setNavCollapse(false)
+                     storeUserDefaultSettings('navCollapse', false)
+                  }} 
+                  className={` ${navCollapse ?  ``: `hidden`} flex ml-1  	 text-xl`}>
                 <BiExpand/>
              </div>
         
-             <div onClick={() => { setNavCollapse(true)}} className={`${navCollapse ?  `hidden`: ``} text-xl justify-self-end	`}>
+             <div onClick={() => { 
+                  setNavCollapse(true)
+                  storeUserDefaultSettings('navCollapse', true)
+                  }} 
+                  className={`${navCollapse ?  `hidden`: ``} text-xl justify-self-end	`}>
               <BiCollapse/> 
              </div>
     
