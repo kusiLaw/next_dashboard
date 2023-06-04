@@ -21,7 +21,7 @@ const Header = () => {
   }
 
   return (
-   <header className='flex flex-col mb-3 md:mb-0 md:flex-row  rounded-md justify-between py-2' >
+   <header className='flex flex-col mb-3 md:mb-0 md:flex-row  rounded-md justify-between py-2 animate-fade-left animate-delay-900 animate-duration-900 ' >
       <h1 className='flex text-2xl py-2 text-light_ash_text'>{getHeaderName()}</h1>
       <div className=' flex flex-col md:flex-row self-end border-0 md:border-2 items-center gap-4 py-1  px-4 
               md:shadow-md rounded-xl

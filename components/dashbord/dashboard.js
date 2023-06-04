@@ -47,11 +47,11 @@ const DashBoard = ({children}) => {
 
   return (
    <div className="flex w-[100vw] gap-4 bg-gray_bg dark:bg-white py-3 px-3
-   text-black h-full   z-50   ">
+   text-black h-full   ">
       {/* <> */}
      {
       navMount &&  
-     <div className={`fixed left-3 top-3  bottom-3`}>
+     <div className={`fixed left-3 top-3  bottom-3 z-50`}>
          <Nav navCollapse = {navCollapse} setNavCollapse={setNavCollapse}/>
      </div>
      }
@@ -62,10 +62,10 @@ const DashBoard = ({children}) => {
          ${ (navMount && !navCollapse) && `md:ml-[13rem]` }
          ${ (!navMount) && `md:ml-[0rem]` } 
          `}>
-       <div > 
+       <div className=''> 
          <Header />
        </div> 
-      <div>
+      <div className='z-0'>
          {children} 
       </div>
          

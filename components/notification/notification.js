@@ -10,7 +10,7 @@ import { useState } from 'react';
    const [displayMessage, setDisplayMessage] = useState(openMessage)
 
   return (
-    <div className='relative text-lg font-bold' onClick={()=> {setDisplayMessage(!displayMessage)}}>
+    <div className='relative text-lg font-bold animate-fade-right' onClick={()=> {setDisplayMessage(!displayMessage)}}>
        <IoMdNotifications/>
        <div className='absolute -top-2 -right-1 -py-2 rounded-full text-red-500
         text-sm font-semibold ' >{messages.length}</div>

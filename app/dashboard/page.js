@@ -12,7 +12,7 @@ export default function Home() {
 
 
   return (
-    <main className='h-full w-full' >
+    <main className='h-full w-full transition-all duration-700' >
       <section className='grid md:grid-cols-2 xl:grid-cols-4  gap-6 my-3 ' >
            <DashCard 
             title = 'Total Sales'
