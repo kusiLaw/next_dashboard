@@ -16,7 +16,7 @@ const Nav = ({navCollapse, setNavCollapse}) => {
   return (
 
      <nav className={`flex flex-col ${navCollapse ? `w-[4rem]`:`w-[12rem]`} dark:text-white   bg-white dark:bg-dark_color p-4 rounded-xl shadow-xl  
-     h-full animate-fade-right animate-delay-900 animate-duration-900`}>
+     h-full animate-fade-right animate-delay-500	   ease-in-out duration-500`}>
       <div className='flex flex-col gap-3  pb-4 mb-6 border-1 border-b transition duration-1000'>
         { displayNavControllerButton && <div className='flex w-full justify-between  dark:text-white animate-fadeIn'>
              <div onClick={() => { 
@@ -39,24 +39,24 @@ const Nav = ({navCollapse, setNavCollapse}) => {
 
          <h1 className='dark:text-white  '>Laky</h1>
       </div>
-      <div className=''>
+      <div className='ease-in-out duration-500'>
          <LinkButton   link_path ='/dashboard'   id='home' > 
-           <BiGridAlt/>{navCollapse  ? '' : 'Home' } 
+           <BiGridAlt/>{navCollapse  ? '' : <span className='animate-fadeIn  duration-[1000]'> Home</span> }
          </LinkButton>
          <LinkButton   link_path = '/dashboard/users' id='users' > 
-           <BiUser/> {navCollapse  ? '' : "Users" }
+           <BiUser/> {navCollapse  ? '' : <span className='animate-fadeIn  duration-[1000]'> Users</span>   }
          </LinkButton>
-         <LinkButton   link_path='dashboard/reports' id='report'> 
-           <BiPieChartAlt/>{navCollapse  ? '' : 'Report' } 
+         <LinkButton   link_path='dashboard/#' id='report'> 
+           <BiPieChartAlt/>{navCollapse  ? '' :<span className='animate-fadeIn  duration-[1000]'> Report</span>  } 
          </LinkButton>
      
       </div>
       <div className=''>
-         <LinkButton   link_path='' > 
-              <FiSettings/> {navCollapse  ? '' : 'Settings' }
+         <LinkButton   link_path='dashboard/#' > 
+              <FiSettings/> {navCollapse  ? '' : <span className='animate-fadeIn  duration-[1000]'> Settings</span> }
          </LinkButton>
          <LinkButton t link_path= '/' > 
-              <FaGlobeAfrica/>{navCollapse  ? '' : 'View Page' } 
+              <FaGlobeAfrica/>{navCollapse  ? '' : <span className='animate-fadeIn  duration-[1000]  '> View Page</span> } 
          </LinkButton>
       </div>
       

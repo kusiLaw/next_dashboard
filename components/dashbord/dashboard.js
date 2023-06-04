@@ -46,8 +46,8 @@ const DashBoard = ({children}) => {
  //  }  
 
   return (
-   <div className="flex w-[100vw] gap-4 bg-gray_bg dark:bg-white py-3 px-3
-   text-black h-full   ">
+   <div className=" relative flex w-[100vw] gap-4 bg-gray_bg dark:bg-white py-3 px-3
+   text-black h-full ">
       {/* <> */}
      {
       navMount &&  
@@ -56,7 +56,7 @@ const DashBoard = ({children}) => {
      </div>
      }
 
-     <div className={`w-full 
+     <div className={`w-full  ease-in-out duration-500
          
          ${ (navMount && navCollapse) && `md:ml-[5rem]` }  
          ${ (navMount && !navCollapse) && `md:ml-[13rem]` }
