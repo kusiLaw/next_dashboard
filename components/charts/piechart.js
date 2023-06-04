@@ -1,25 +1,17 @@
 "use client"
+import { useChartResponsive } from '@/hooks/responsive';
+import { yearLabels, options } from './chartUtils';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const options = {
- responsive: true,
- plugins: {
-   legend: {
-     position: 'top',
-   },
-   title: {
-     display: false,
-     text: 'Chart.js Bar Chart',
-   },
- },
-};
 
+const PieChart = () => {
+ const [resizeRef ] = useChartResponsive()
 
-
-export const data = {
+ const option = options('Items Purchases')
+ const data = {
   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
   datasets: [
     {
@@ -46,8 +38,13 @@ export const data = {
   ],
 };
 
-const PieChart = () => {
-  return <Pie options={options} data={data} width={100} height={60} />;
+
+  return (
+   <div className='flex w-full h-[23rem]' >
+      <Pie options={option} data={data}   ref={resizeRef} />
+    </div>
+  )
+  
 }
 
 export default PieChart

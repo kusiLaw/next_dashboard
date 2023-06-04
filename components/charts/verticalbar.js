@@ -1,6 +1,6 @@
 "use client"
 import { useChartResponsive } from '@/hooks/responsive';
-
+import { yearLabels, options } from './chartUtils';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,7 +11,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-// import faker from 'faker';
 
 ChartJS.register(
   CategoryScale,
@@ -22,42 +21,36 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
-    },
-  },
-};
 
-const labels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July',
-'Aug', 'Sept', 'Oct','Nov', 'Dec'];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [12, 20, 25,30, 50, 60, 70,  85,90, 92, 100, 138],
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: [23, 16, 10 ,15, 25, 46, 57,  43, 44, 50, 60, 63],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
 
 const VerticalBar = ( ) => {
- const [resizeRef ] = useChartResponsive()
+   const [resizeRef ] = useChartResponsive()
 
-  return <Bar options={options} data={data} width={100} height={60} ref={resizeRef} />;
+   const option = options('Sales / Expenses')
+   console.log(option)
+   const data = {
+    labels : yearLabels,
+     datasets: [
+       {
+         label: 'Sales',
+         data: [12, 20, 25,30, 50, 60, 70,  85,90, 92, 100, 138],
+         backgroundColor: 'rgba(255, 99, 132, 0.5)',
+       },
+       {
+         label: 'Expenses',
+         data: [23, 16, 10 ,15, 25, 46, 57,  43, 44, 50, 60, 63],
+         backgroundColor: 'rgba(53, 162, 235, 0.5)',
+       },
+     ],
+   };
+
+
+  return (
+   <div className='flex w-full h-[23rem]' >
+       <Bar options={option} data={data} ref={resizeRef} />
+   </div>
+ 
+  )
 }
 
 

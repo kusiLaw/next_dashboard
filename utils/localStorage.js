@@ -1,3 +1,4 @@
+'use client'
 
 export const getDashboardLocalSettings = () => {
  //return default settings if no user data

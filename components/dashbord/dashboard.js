@@ -13,34 +13,42 @@ const DashBoard = ({children}) => {
  
   console.log('navMount?', navMount)
   
-  const layout = () => {
-    if (window.innerWidth < 768){
-      return(
-       <>
+ //  const layout = () => {
+ //    if (window.innerWidth < 768){
+ //      return(
+ //       <>
         
-        {
+ //        {
           
-         <div className={`${navMount ? `hidden`: `block`} fixed left-3 top-3  bottom-3`}>
-             <Nav navCollapse = {navCollapse} setNavCollapse={setNavCollapse}/>
-         </div>
-         }
+ //         <div className={`${navMount ? `hidden`: `block`} fixed left-3 top-3  bottom-3`}>
+ //             <Nav navCollapse = {navCollapse} setNavCollapse={setNavCollapse}/>
+ //         </div>
+ //         }
     
-         <div className={`w-full `}>
-           <div > 
-             <Header />
-           </div> 
-          <div>
-             {children} 
-          </div>
+ //         <div className={`w-full `}>
+ //           <div > 
+ //             <Header />
+ //           </div> 
+ //          <div>
+ //             {children} 
+ //          </div>
              
-         </div>
-      </>
+ //         </div>
+ //      </>
 
-      )
-    }
+ //      )
+ //    }
 
- return (
-   <>
+ // return (
+   
+    
+ //  )
+ //  }  
+
+  return (
+   <div className="flex w-[100vw] gap-4 bg-gray_bg dark:bg-white py-3 px-3
+   text-black h-full   z-50   ">
+      {/* <> */}
      {
       navMount &&  
      <div className={`fixed left-3 top-3  bottom-3`}>
@@ -62,15 +70,7 @@ const DashBoard = ({children}) => {
       </div>
          
      </div>
-   </>
-    
-  )
-  }  
-
-  return (
-   <div className="flex w-[100%] gap-4 bg-gray_bg dark:bg-white py-3 px-3
-   text-black h-full   z-50   ">
-      {layout()}
+   {/* </> */}
    </div>
   )
     

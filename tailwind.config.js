@@ -29,14 +29,14 @@ module.exports = {
          'to': {opacity: '1' },
         },
         slideIn: {
-         'from': { width: '0%' },
+         'from': { width: '0rem' },
          'to': { width: 'content-fit' }
        }
       },
 
       animation: {
-       slideIn: 'slideIn 800ms  ',
-       fadeIn: 'fadeIn 800ms  ',
+       slideIn: 'slideIn 700ms  ',
+       fadeIn: 'fadeIn 700ms  ',
      }
     },
   },

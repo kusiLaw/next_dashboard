@@ -1,7 +1,6 @@
 "use client"
-
 import { useChartResponsive } from '@/hooks/responsive';
-
+import { yearLabels, options } from './chartUtils';
 import {
  Chart as ChartJS,
  CategoryScale,
@@ -10,7 +9,6 @@ import {
  LineElement,
  Title,
  Tooltip,
- // Filler,
  Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
@@ -23,66 +21,45 @@ ChartJS.register(
  LineElement,
  Title,
  Tooltip,
- // Filler,
  Legend
 );
-
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Total Sales',
-      font: {
-       size : 18
-      }
-    },
-  },
-  elements:{
-   line:{
-    tension: 0,
-    borderWidth: 1,
-    // borderColor: 'lightblue',
-    // fill: 'start',
-    // backgroundColor: '#0dd2f9'
-   }
-  },
-  point: {
-   radius : 20,
-   hitRadius : 30
-  }
-};
-
-const labels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July',
-'Aug', 'Sept', 'Oct','Nov', 'Dec'];
-
-export const data = {
-  labels,
-  datasets: [
-   {
-    label: 'Dataset 1',
-    data: [12, 20, 25,30, 50, 60, 70,  85,90, 92, 100, 138],
-    backgroundColor: 'rgba(255, 99, 132, 0.5)',
-  },
-  {
-    label: 'Dataset 2',
-    data: [23, 16, 10 ,15, 25, 46, 57,  43, 44, 50, 60, 63],
-    backgroundColor: 'rgba(53, 162, 235, 0.5)',
-  },
-  ],
-};
 
 
  const LineChart = ( ) => {
 
   const [resizeRef ] = useChartResponsive()
 
+  const option = options('Items Purchases')
+  const data = {
+      labels: yearLabels,
+      datasets: [
+       {
+        label: 'Dataset 1',
+        data: [12, 20, 25,30, 50, 60, 70,  85,90, 92, 100, 138],
+        backgroundColor: 'rgb(255, 99, 132)',
+      },
+      {
+        label: 'Dataset 2',
+        data: [23, 16, 10 ,15, 25, 46, 57,  43, 44, 50, 60, 63],
+        backgroundColor: 'rgb(53, 162, 235)',
+      },
+       {
+        label: 'Dataset 2',
+        data: [73, 76, 80 ,65, 68, 56, 57,  43, 45, 36, 30, 23],
+        backgroundColor: 'rgb(98, 24, 195)',
+      },
+      {
+       label: 'Dataset 2',
+       data: [33, 36, 38 ,48, 55, 56, 67,  98, 99, 110, 120, 123],
+       backgroundColor: 'rgb(13, 210, 249)',
+     },
+      ],
+    };
+
+
   return (
-   <div className='bg-white '>
-     <Line options={options} data={data} width={100} height={60} ref={resizeRef} />
+   <div className='flex w-full h-[23rem]' >
+     <Line options={option} data={data}  ref={resizeRef} />
    </div>
     
   )

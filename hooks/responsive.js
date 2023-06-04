@@ -8,9 +8,28 @@ export const useChartResponsive = () => {
  const {navMount} = useContext(navMountContext)
  const {navCollapse} = useContext(navCollapseContext)
  const resizeRef = useRef(null)
+ 
+  const handleResize = () => {
+   if (resizeRef.current){
+     resizeRef.current.resize()
+   }
+  };
 
  useEffect(()=>{ 
-  resizeRef.current.resize()
+
+
+   window.addEventListener('resize', handleResize);
+   
+   return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+   
+ }, 
+  [])
+
+
+  useEffect(()=>{ 
+   handleResize()
  }, 
   [navMount, navCollapse])
 

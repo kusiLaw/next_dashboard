@@ -9,7 +9,7 @@ const ProfileCard = () => {
 
   return (
    <div 
-   className='flex  justify-between  absolute bg-green p-4 top-10  right-0 bg-white shadow-xl  z-10'>
+   className='flex  justify-between  absolute bg-green p-4 top-10  right-0 bg-white shadow-xl  z-10 animate-fadeIn'>
      <div className='flex w-[7rem] h-[7rem]  items-center justify-center relative border-0 hover:border-4 transition-all duration-300 rounded-full'>
         <Avatar height={'h-[6rem]'} width={'w-[6rem]'} />  
      </div>
