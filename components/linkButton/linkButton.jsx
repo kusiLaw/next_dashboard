@@ -7,16 +7,15 @@ const LinkButton = (props) => {
   const {text, children, link_path, } = props
   
   const pathname = usePathname();
-  const activeLink = pathname === link_path ? 'active [&.active]:bg-blue_contest [&.active]:text-white [&.active]:dark:bg-dark_color_hover' : ''
+  const activeLink = pathname === link_path ? 'active [&.active]:bg-blue_contest [&.active]:drop-shadow-lg [&.active]:text-white [&.active]:dark:bg-dark_color_hover' : ''
 
   return (
-   <Link href={link_path}   className={`nav flex  w-full gap-4 items-center h-10  px-2 text-lg shadow-sm rounded-xl
-      bg-inherit text-light_ash_text dark:text-white ${activeLink}  
-      
+   <Link href={link_path}   className={`nav flex  w-full  items-center h-10  px-2 text-lg rounded-xl
+      bg-inherit text-light_ash_text dark:text-white ${activeLink}  overflow-hidden truncate
     hover:bg-blue_contest hover:text-white hover:dark:bg-dark_color_hover hover:dark:text-white`}>
       
-        { children }
-      
+       <span className='mr-6 '> { children[0] }</span>
+       <>{children.slice(1)}</>
     </Link>
   )
 }
