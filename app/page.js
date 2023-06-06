@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className=''>
        <div className='w-full h-screen flex items-center justify-center'>
-          <div className='p-4 border-2 border-gray-500 dark:border-dark_white_bg shadow-lg'>
+          <div className='p-4 border-2 border-gray-500 dark:border-dark_white_bg drop-shadow-lg shadow-lg'>
             <h1 className='mb-4 font-bold text-xl'>Welcome To Next DashBoard </h1>
             <div>
              <p className='text-center '>Your Index Page Here !</p>

@@ -18,8 +18,12 @@ const Settings = ({setOpenSettings}) => {
       </div>
       <div className='flex flex-col gap-4 mt-8 w-full'>
            <ThemePicker />
-           <NavExpandController />
-           <ToggleButtonController />  
+           <div className='hidden md:flex flex-col gap-4 mt-8 w-full'>
+             <NavExpandController />
+             <ToggleButtonController />  
+           </div>
+           
+           
       </div>
     </div>
   )
