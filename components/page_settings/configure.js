@@ -9,7 +9,7 @@ const PageConfiguration = () => {
 
     <>
     <div className='' onClick={() => { setOpenSettings(true)}}>
-      <FiSettings />hh
+      <FiSettings />
     </div>
     {openSetting && <Settings  setOpenSettings= {setOpenSettings} /> }
 

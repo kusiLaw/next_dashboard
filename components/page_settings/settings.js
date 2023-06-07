@@ -9,7 +9,7 @@ import SideWindow from '../side_window/SideWindow';
 const Settings = ({setOpenSettings}) => {
 
   return (
-      <SideWindow open={setOpenSettings} title='Configuration'>
+      <SideWindow openFn={setOpenSettings} title='Configuration'>
          <div className='flex flex-col gap-4 mt-8 w-full'>
               <ThemePicker />
               <div className='hidden md:flex flex-col gap-4 mt-8 w-full'>

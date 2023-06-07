@@ -38,7 +38,7 @@ const DashBoard = ({children}) => {
       <div className='z-0'>
          {children} 
       </div>
-         <MobileNav/>
+       
      </div>
    {/* </> */}
    </div>

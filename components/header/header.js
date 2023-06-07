@@ -8,7 +8,7 @@ import { CollapsibleMenu } from '../collapsible_menu/menu';
 import Profile from '../profile/profile';
 import PageConfiguration from '../page_settings/configure';
 import { toggleBtnContext } from '@/app/dashboard/provider'
-
+import MobileMenuToggle from '../collapsible_menu/mobile_menu';
 
 
 const Header = () => {
@@ -35,7 +35,9 @@ const Header = () => {
                <div className='hidden md:block'>
                   {displayToggleBtn && <CollapsibleMenu  />}
                </div>
-               
+               <div className='md:hidden'>
+                  <MobileMenuToggle  />
+               </div>
                <Notification  messages = {[]}/>
                <div className='relative '>
                  <Profile />
