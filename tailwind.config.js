@@ -45,6 +45,11 @@ module.exports = {
     addVariant('current', '&.active');
    }),
 
+   function ({ addVariant }) {
+    addVariant('child', '& > *');
+    addVariant('child-hover', '& > *:hover');
+   },
+   
    require('tailwindcss-animated')
 
   ],

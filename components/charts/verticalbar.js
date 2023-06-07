@@ -46,7 +46,7 @@ const VerticalBar = ( ) => {
 
 
   return (
-   <div className='flex w-full h-[23rem]' >
+   <div className='flex w-full  h-[23rem]' >
        <Bar options={option} data={data} ref={resizeRef} />
    </div>
  

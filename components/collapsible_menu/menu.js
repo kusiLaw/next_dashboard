@@ -11,7 +11,7 @@ export const CollapsibleMenu = () => {
 
 
   return (
-    <div className='text-md font-light'>
+    <div className='text-md font-light child:!font-bold child:!m-0 child:!p-0'>
       <Hamburger toggled ={!navMount}  onToggle={ (toggled) => {
         if(toggled){
          setNavMount(false)

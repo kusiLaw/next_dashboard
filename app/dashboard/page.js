@@ -12,7 +12,7 @@ export default function Home() {
 
 
   return (
-    <main className='h-full w-full' >
+    <main className='h-full w-[100%]' >
       <section className='grid md:grid-cols-2 xl:grid-cols-4  gap-6 my-3 ' >
            <DashCard 
             title = 'Total Sales'
@@ -47,21 +47,24 @@ export default function Home() {
            />
       </section>
 
-      <section  className='grid py-3 gap-3 grid-cols-1 md:grid-cols-2 h-full w-full '>
-        <div  className='p-2 flex justify-center items-center w-full h-fit drop-shadow-xl bg-white  duration-500'>
+      <section  className='grid w py-3  gap-3 grid-cols-1 md:grid-cols-2 h-full overflow-hidden  '>
+      {/* <section  className='flex flex-wrap flex-[1_1_100%] py-3   gap-3  h-full overflow-hidden  '> */}
+
+        <div  className='p-2 flex justify-center items-center  w-auto  h-fit drop-shadow-xl bg-white  duration-500'>
            <AreaChart />
         </div>
-         <div className='p-2 flex justify-center items-center  w-full  h-fit drop-shadow-xl bg-white  duration-500'> 
+         <div className='p-2 flex justify-center items-center w-auto h-fit drop-shadow-xl bg-white  duration-500'> 
            <VerticalBar />
         </div>
-        <div className='p-2 flex justify-center items-center  w-full h-fit drop-shadow-xl bg-white  duration-500'> 
+         <div className='p-2 flex justify-center items-center w-auto h-fit drop-shadow-xl bg-white  duration-500'> 
           <LineChart />
         </div>
-        <div className=' p-2 flex justify-center items-center  w-full h-fit  drop-shadow-xl  bg-white  duration-500'> 
+        <div className=' p-2 flex justify-center items-center w-auto h-fit  drop-shadow-xl  bg-white  duration-500'> 
            <PolarAreaChart />
-        </div> 
-     
+        </div>   
       </section>
+
+   
     </main>
 
   )
