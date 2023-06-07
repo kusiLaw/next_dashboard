@@ -5,8 +5,7 @@ import { useState } from 'react';
 
  const Notification = (props) => {
   const {openMessage = false, messages = []} = props
-  console.log('rendering not')
-
+  
    const [displayMessage, setDisplayMessage] = useState(openMessage)
 
   return (
@@ -18,7 +17,7 @@ import { useState } from 'react';
          text-md font-normal w-fit px-4 py-2 z-10 shadow-lg right-0  bg-white duration-500'>
        {messages.length > 0 ? 
         messages.map((message)=> <div key={message}>{message}</div>) : 
-       <span className='block w-40'>{'No message'}</span>}
+       <span className='block w-40 animate-fadeIn z-40'>{'No message'}</span>}
        </div>}
     </div>
   )

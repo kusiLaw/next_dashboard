@@ -1,6 +1,5 @@
 
 'use client'
-// import Nav from '@/components/nav/nav'
 import DesktopNav from '../nav/desktop'
 import MobileNav from '../nav/mobile'
 import Header from '@/components/header/header'
@@ -12,13 +11,11 @@ import { navCollapseContext } from '@/app/dashboard/provider'
 const DashBoard = ({children}) => {
   const {navMount} = useContext(navMountContext)
   const {navCollapse, setNavCollapse} = useContext(navCollapseContext)
- 
-  console.log('navMount?', navMount)
-  
+
   return (
    <div className=" relative flex w-[100vw] gap-4 bg-gray_bg dark:bg-white py-3 px-3
    text-black h-full ">
-      {/* <> */}
+    
      {
       navMount &&  
      <div className={`hidden md:block fixed left-3 top-3  bottom-3 z-50`}>
@@ -40,7 +37,7 @@ const DashBoard = ({children}) => {
       </div>
        
      </div>
-   {/* </> */}
+  
    </div>
   )
     
