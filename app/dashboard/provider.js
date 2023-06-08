@@ -1,7 +1,6 @@
 'use client'
 import { createContext, useState, useEffect } from 'react'
-import { useDashboardUserDefault } from '@/hooks/localStorage'
-
+import { getUserDefaultSettings } from '@/utils/localStorage'
 
 // All shared data use by dashboard only should be here ..
 export const navMountContext = createContext()
@@ -11,18 +10,9 @@ export const  navCollapseContext = createContext()
 
 
 
-export function DashboardProvider({ children }) {
- 
- const [initialData]  = useDashboardUserDefault("dashboardDefaultSettings",
-                                                                 {"navMount" : true,
-                                                                 "displayToggleBtn" : false,
-                                                                 "displayNavControllerButton" : false,
-                                                                 "navCollapse" : false}
-                                                                )
-console.log(initialData)
+ const DashboardProvider = ({ children }) => {
 
-
-
+ const initialData = getUserDefaultSettings()
 
  const [navMount, setNavMount]  = useState( initialData.navMount )  //default : true
  const [displayToggleBtn, setDisplayToggleBtn] = useState( initialData.displayToggleBtn  )
@@ -41,3 +31,5 @@ console.log(initialData)
  </navMountContext.Provider>
  )
 }
+
+export default DashboardProvider 
