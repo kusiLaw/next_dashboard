@@ -1,22 +1,33 @@
 'use client'
-import { createContext, useState } from 'react'
-import { getUserDefaultSettings } from '@/utils/localStorage'
+import { createContext, useState, useEffect } from 'react'
+import { useDashboardUserDefault } from '@/hooks/localStorage'
+
 
 // All shared data use by dashboard only should be here ..
-
 export const navMountContext = createContext()
 export const toggleBtnContext = createContext()
 export const navControllerButtonContext = createContext()
 export const  navCollapseContext = createContext()
 
 
+
 export function DashboardProvider({ children }) {
- const settings = getUserDefaultSettings()
- console.log(settings, 'iuyuiiuiuyiuyiui')
- const [navMount, setNavMount]  = useState( settings.navMount)  //default : true
- const [displayToggleBtn, setDisplayToggleBtn] = useState( settings.displayToggleBtn )
- const [displayNavControllerButton, setNavControllerButton] = useState( settings.displayNavControllerButton)
- const [navCollapse, setNavCollapse] = useState( settings.navCollapse)
+ 
+ const [initialData]  = useDashboardUserDefault("dashboardDefaultSettings",
+                                                                 {"navMount" : true,
+                                                                 "displayToggleBtn" : false,
+                                                                 "displayNavControllerButton" : false,
+                                                                 "navCollapse" : false}
+                                                                )
+console.log(initialData)
+
+
+
+
+ const [navMount, setNavMount]  = useState( initialData.navMount )  //default : true
+ const [displayToggleBtn, setDisplayToggleBtn] = useState( initialData.displayToggleBtn  )
+ const [displayNavControllerButton, setNavControllerButton] = useState( initialData.displayNavControllerButton )
+ const [navCollapse, setNavCollapse] = useState( initialData.navCollapse )
 
  return (
  <navMountContext.Provider value={{navMount, setNavMount}}>

@@ -12,7 +12,7 @@ const Settings = ({setOpenSettings}) => {
       <SideWindow openFn={setOpenSettings} title='Configuration'>
          <div className='flex flex-col gap-4 mt-8 w-full'>
               <ThemePicker />
-              <div className='hidden md:flex flex-col gap-4 mt-8 w-full'>
+              <div className='hidden md:flex flex-col gap-4 w-full'>
                 <NavExpandController />
                 <ToggleButtonController />  
               </div> 
