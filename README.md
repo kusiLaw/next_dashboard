@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Portfolio V2   ](#-portfolio-v2---)
+- [📖Next.js Dashboard  ](#nextjs-dashboard--)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -24,7 +24,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Portfolio V2   <a name="about-project"></a>
+# 📖Next.js Dashboard  <a name="about-project"></a>
 
 > Web app that gives users the ability to see relationships between different data sets, spot outliers, and track performance over time. Built with Next.js.
 
@@ -38,7 +38,7 @@
 <details>
   <summary>Language</summary>
   <ul>
-    <li><a href="https://www.ruby-lang.org/en/">JavaScript</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
 <details>
@@ -67,7 +67,7 @@
 <details>
 <summary>Test Library</summary>
   <ul>
-    <li><a href="https://rspec.info/"></a></li>
+    <li><a href="https://jestjs.io/"></a></li>
   </ul>
 </details>
 
@@ -88,10 +88,11 @@
 
 > Add a link to your deployed project.
 
-- [Live Link](https://porfolio-v2-eta.vercel.app/)
+- ## [Live Link](https://next-dashboard-px4y4l6ow-kusilaw.vercel.app/dashboard)
   
 
 <!-- GETTING STARTED -->
+- ## [Live Demo](https://www.linkedin.com/posts/lawrence-addai-kusi_nextjs-reactjs-dashboarddesign-activity-7079492096537022464-gEEH?utm_source=share&utm_medium=member_desktop)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
