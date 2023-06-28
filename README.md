@@ -28,6 +28,9 @@
 
 > Web app that gives users the ability to see relationships between different data sets, spot outliers, and track performance over time. Built with Next.js.
 
+![Screenshot from 2023-06-27 15-02-16](https://github.com/kusiLaw/next_dashboard/assets/52538840/ac3f0431-21a3-4d52-9c31-fa9eae3ac8be)
+
+![Screenshot from 2023-06-27 15-04-47](https://github.com/kusiLaw/next_dashboard/assets/52538840/a605420d-93d3-4e71-abba-721f9a17f0c4)
 
 
 ## 🛠 Built With <a name="built-with"></a>
