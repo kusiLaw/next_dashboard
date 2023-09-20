@@ -6,56 +6,58 @@ export const userdata = {
           email: "neil.sims@localhost.com",
           role: 'React Developer',
           online : true,
-          image: ''
+          image: 'https://embed.widencdn.net/img/kelleyiu/athtscmlkn/320x320px/KSBRyanMarchenko_20220127_002.jpg?keep=n&crop=yes'
         },
         {
           name : 'Peter Ramp',
           email: "peter@localhost.com",
           role: 'Python Developer',
           online : true,
-          image: ''
+          image: 'https://afjcis.org/wp-content/uploads/2020/06/kienan-taweil-3-scaled-e1592410159355.jpg'
         },
         {
           name : 'Lawrence Yeboa',
           email: "Lawrence@localhost.com",
           role: 'React Developer',
           online : false,
-          image: 'https://avatars.githubusercontent.com/u/52538840?v=4'
+          image: 'https://media-exp1.licdn.com/dms/image/C4D03AQHQ_PqUF0cXRw/profile-displayphoto-shrink_800_800/0/1550872145705?e=2147483647&v=beta&t=3do2Wgl7vpD_oR2GIEeIpxihPzkA37ipWofmit1NRdo'
         },
         {
           name : 'florence Tember',
           email: "neil.Lawrence@localhost.com",
           role: 'DevOps Developer',
           online : true,
-          image: 'https://as2.ftcdn.net/v2/jpg/07/01/44/31/1000_F_701443117_mlFWsEy7xXAmJqvnpLuFVIjlNVFjIJko.jpg'
+        
+          image: 'https://i.pinimg.com/originals/74/d6/21/74d6216d93a3642650cb7cf49593e207.jpg'
+
         },
         {
           name : 'Gorge Peter',
           email: "gorge@localhost.com",
           role: 'React Developer',
           online : true,
-          image: 'https://as2.ftcdn.net/v2/jpg/06/19/49/17/1000_F_619491753_rDK4qNKSnpF2XANgGM2TwcsDQXNNVutc.jpg'
+          image: 'https://i1.rgstatic.net/ii/profile.image/776501293248516-1562143743732_Q512/Tobias-Seyler.jpg'
         },
         {
           name : 'Lawrence Yeboa',
           email: "Lawrence@localhost.com",
           role: 'React Developer',
           online : false,
-          image: 'https://avatars.githubusercontent.com/u/52538840?v=4'
+          image: 'https://th.bing.com/th/id/OIP.Od6cXskABJg0xWsABH536QAAAA?rs=1&pid=ImgDetMain'
         },
         {
           name : 'florence Tember',
           email: "neil.Lawrence@localhost.com",
           role: 'DevOps Developer',
           online : true,
-          image: 'https://media.istockphoto.com/id/1367907042/photo/overjoyed-millennial-african-american-woman-in-eyeglasses-laughing.jpg?s=2048x2048&w=is&k=20&c=roSGHAVNNLqbVarJruB1fb3kNYBtcqO36olQpQ7bGgs='
+          image: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg'
         },
         {
           name : 'Gorge Peter',
           email: "gorge@localhost.com",
           role: 'React Developer',
           online : true,
-          image: 'https://media.istockphoto.com/id/1329404151/photo/young-black-boy-looking-at-camera-smiling-against-white-background.jpg?s=2048x2048&w=is&k=20&c=eOerNKpI9QvFp0y4ySCcH0HVuL-Qa5Wa_Q0yyapf_iE='
+          image: 'https://profile-images.xing.com/images/4ae2612933f99e6509fece8939d2f138-1/mathias-renz.1024x1024.jpg'
         }
       ]
 }
