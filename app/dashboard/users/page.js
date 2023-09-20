@@ -1,10 +1,11 @@
 import React from 'react'
-import RadioButton from '@/components/radio_button/radio'
+import { UserTable } from '@/components/table/table'
+import {userdata} from '@/mockdata'
 const Users = () => {
   return (
-    <div className='flex  justify-center bg-gray_bg dark:bg-white h-screen '>
-     {/* <RadioButton name = {''} /> */}
-     <div className='text-2xl '>Empty</div>
+    <div className='flex pt-6 bg-gray_bg dark:bg-white h-screen border'>
+   
+     <UserTable userdata = {userdata}/>
     </div>
   )
 }
