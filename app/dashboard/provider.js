@@ -5,7 +5,7 @@ import { getUserDefaultSettings } from '@/utils/localStorage'
 // All shared data use by dashboard only should be here ..
 export const navMountContext = createContext()
 export const toggleBtnContext = createContext()
-export const navControllerButtonContext = createContext()
+export const navMouseControlContext = createContext()
 export const  navCollapseContext = createContext()
 
 
@@ -16,17 +16,17 @@ export const  navCollapseContext = createContext()
 
  const [navMount, setNavMount]  = useState( initialData.navMount )  //default : true
  const [displayToggleBtn, setDisplayToggleBtn] = useState( initialData.displayToggleBtn  )
- const [displayNavControllerButton, setNavControllerButton] = useState( initialData.displayNavControllerButton )
+ const [mouseControlNav, setMouseControlNav] = useState( initialData.mouseControlNav )
  const [navCollapse, setNavCollapse] = useState( initialData.navCollapse )
-
+ 
  return (
  <navMountContext.Provider value={{navMount, setNavMount}}>
     <toggleBtnContext.Provider value={{displayToggleBtn, setDisplayToggleBtn}}>
-       <navControllerButtonContext.Provider  value={{displayNavControllerButton, setNavControllerButton}} >
+       <navMouseControlContext.Provider  value={{mouseControlNav, setMouseControlNav}} >
           <navCollapseContext.Provider value={{navCollapse, setNavCollapse}}>
              {children}
           </navCollapseContext.Provider>
-       </navControllerButtonContext.Provider>
+       </navMouseControlContext.Provider>
     </toggleBtnContext.Provider>
  </navMountContext.Provider>
  )

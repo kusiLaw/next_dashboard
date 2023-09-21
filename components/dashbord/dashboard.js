@@ -11,18 +11,7 @@ import { navCollapseContext } from '@/app/dashboard/provider'
 const DashBoard = ({children}) => {
   const {navMount} = useContext(navMountContext)
   const {navCollapse, setNavCollapse} = useContext(navCollapseContext)
- //control hydration
-  // const [mount, setMount] = useState(false)
-
-  // useEffect(()=>{
-  //  setMount(true)
-  // },[])
-
-  // if(!mount){
-  //  return <></>
-  // }
-
-
+ 
   return (
    <div className=" relative flex w-full  gap-4 bg-gray_bg dark:bg-white py-3 px-4
    text-black h-full ">
