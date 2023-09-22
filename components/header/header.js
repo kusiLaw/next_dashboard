@@ -9,11 +9,15 @@ import Profile from '../profile/profile';
 import PageConfiguration from '../page_settings/configure';
 import { toggleBtnContext } from '@/app/dashboard/provider'
 import MobileMenuToggle from '../collapsible_menu/mobile_menu';
+import { useTheme } from 'next-themes';
+import { FaMoon } from "react-icons/fa";
+import { BsBrightnessHighFill } from "react-icons/bs";
 
 
 const Header = () => {
  const pathname = usePathname();
  const {displayToggleBtn } = useContext(toggleBtnContext)
+ const { theme, setTheme } = useTheme()
 
   const getHeaderName  = () => {
      const name =  pathname.split('/').pop()
@@ -32,10 +36,19 @@ const Header = () => {
           </div>
           <div className='flex order-0 md:order-1 items-center gap-4 self-end p-1 md:p-0 
             rounded-lg px-4 md:px-0 md:border-0'>
-              <PageConfiguration />
+              
                 {/* <div className='hidden md:block '>
                   {displayToggleBtn && <CollapsibleMenu  />}
                </div> */}
+               <div>
+                 {theme === "dark" ?  
+                 <span onClick={ () => setTheme('dark')}><BsBrightnessHighFill/></span> : 
+                  <span onClick={ (e) => {
+                     e.preventDefault()
+                     setTheme('light');
+                      console.log(e)}}><FaMoon /></span>}
+               </div>
+               <PageConfiguration />
                 <div className='md:hidden md:invisible'>
                   <MobileMenuToggle  />
                </div> 
