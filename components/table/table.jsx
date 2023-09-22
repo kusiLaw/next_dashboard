@@ -8,10 +8,10 @@ export const UserTable = ({userdata}) =>{
         <table className="w-full text-sm text-left rtl:text-right  dar:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dar:bg-gray-700 dar:text-gray-400">
                 <tr>
-                    <th scope="col" className="p-4">
-                        <div className="flex items-center">
+                    <th scope="col" className="p-4 ">
+                        <div className="flex items-center dark:bg-white">
                             <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-light_ash_text bg-gray_bg border-gray-100
-                             rounded  focus:ring-2 dark:bg-red-700 
+                             rounded  focus:ring-2 dark:
                               " />
                             <label for="checkbox-all-search" className="hidden">checkbox</label>
                         </div>

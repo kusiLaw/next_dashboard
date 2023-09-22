@@ -17,7 +17,7 @@ const DesktopNav = ({navCollapse, setNavCollapse}) => {
        onMouseEnter={() => { mouseControlNav & setNavCollapse(false)  }}        >
       <div className='flex flex-col gap-3  pb-4 mb-6 border-1 border-b transition duration-1000 mt-2'>
               <h1 className='dark:text-white  font-extralight'><span className='text-blue_contest italic 
-              font-semibold' >L</span>aky</h1>
+              font-bold' >L</span>aky</h1>
       </div>
        <Nav navCollapse={navCollapse} />   
     </nav> 
