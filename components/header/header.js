@@ -42,11 +42,9 @@ const Header = () => {
                </div> */}
                <div>
                  {theme === "dark" ?  
-                 <span onClick={ () => setTheme('dark')}><BsBrightnessHighFill/></span> : 
-                  <span onClick={ (e) => {
-                     e.preventDefault()
-                     setTheme('light');
-                      console.log(e)}}><FaMoon /></span>}
+                  <span onClick={ () => setTheme('light')}><BsBrightnessHighFill  /></span>  : 
+                   <span onClick={ (e) => {setTheme('dark')}}><FaMoon  /></span>
+                  }
                </div>
                <PageConfiguration />
                 <div className='md:hidden md:invisible'>
