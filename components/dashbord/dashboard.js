@@ -13,7 +13,7 @@ const DashBoard = ({children}) => {
   const {navCollapse, setNavCollapse} = useContext(navCollapseContext)
  
   return (
-   <div className=" relative flex w-full  gap-4 bg-gray_bg dark:bg-white py-3 px-4
+   <div className=" relative flex w-full  gap-4 bg-gray_bg dark:bg-dark_white_bg py-3 px-4
    text-black h-full ">
     
      {

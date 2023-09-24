@@ -7,7 +7,7 @@ import { Providers } from './provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next Dashboard',
+  title: 'Next.js Dashboard',
   description: 'Developed by Lawrence',
 }
 
