@@ -5,7 +5,7 @@ const ToggleSwitch = ({onChangeFn = null, name = '', checked = false, cache = fa
   return (
     <>
        <label className='flex justify-between w-full relative self-start'>
-           <span className='font-semibold'>{ name }</span>
+           <span className='text-base'>{ name }</span>
          <input onChange={()=>{ 
           if (onChangeFn !== null) {
            onChangeFn(!checked)

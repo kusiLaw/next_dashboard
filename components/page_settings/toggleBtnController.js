@@ -9,7 +9,7 @@ const ToggleButtonController = ({}) => {
   return (
     <div >
       <ToggleSwitch 
-      name = {'Toggle Button'}  
+      name = {'Menu Ctrl Button'}  
       checked = {displayToggleBtn} 
       onChangeFn ={setDisplayToggleBtn} 
       extra = {{cache : true, storageKey : 'displayToggleBtn'}}
