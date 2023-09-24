@@ -10,8 +10,9 @@ import PageConfiguration from '../page_settings/configure';
 import { toggleBtnContext } from '@/app/dashboard/provider'
 import MobileMenuToggle from '../collapsible_menu/mobile_menu';
 import { useTheme } from 'next-themes';
-import { FaMoon } from "react-icons/fa";
+import { IoIosMoon } from "react-icons/io";
 import { BsBrightnessHighFill } from "react-icons/bs";
+
 
 
 const Header = () => {
@@ -35,18 +36,21 @@ const Header = () => {
              <SearchInput />
           </div>
           <div className='flex order-0 md:order-1 items-center gap-4 self-end p-1 md:p-0 
-            rounded-lg px-4 md:px-0 md:border-0'>
+            rounded-lg px-4 md:px-0 md:border-0 text-lg'>
               
-                {/* <div className='hidden md:block '>
+               <div className='hidden md:block '>
                   {displayToggleBtn && <CollapsibleMenu  />}
-               </div> */}
-               <div>
+               </div> 
+         
+               <div className='text-lg'>
                  {theme === "dark" ?  
                   <span onClick={ () => setTheme('light')}><BsBrightnessHighFill  /></span>  : 
-                   <span onClick={ (e) => {setTheme('dark')}}><FaMoon  /></span>
+                   <span onClick={ (e) => {setTheme('dark')}}><IoIosMoon  /></span>
                   }
                </div>
-               <PageConfiguration />
+               <div className='text-base'>
+                  <PageConfiguration />
+               </div>
                 <div className='md:hidden md:invisible'>
                   <MobileMenuToggle  />
                </div> 
