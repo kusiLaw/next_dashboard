@@ -1,10 +1,13 @@
 import React from 'react'
 import { UserTable } from '@/components/table/table'
 import {userdata} from '@/mockdata'
+import { Button } from '@/components/button'
 const Users = () => {
   return (
-    <div className='flex pt-6 bg-gray_bg dark:bg-white h-screen border'>
-   
+    <div className='flex flex-col pt-2  gap-3 bg-inherit h-screen'>
+     <div className='self-end  mt-1 '>
+      <Button/>
+     </div>
      <UserTable userdata = {userdata}/>
     </div>
   )
