@@ -1,9 +1,10 @@
+import TextInput from "@/components/textInput";
 import React from "react";
 
 const Widgets = () =>{
     return(
-        <div className="bg-inherit">
-             hh
+        <div className="flex flex-wrap bg-inherit">
+             <TextInput />
         </div>
     )
 }
