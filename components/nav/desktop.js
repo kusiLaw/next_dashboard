@@ -19,7 +19,10 @@ const DesktopNav = ({navCollapse, setNavCollapse}) => {
               <h1 className='dark:text-white  font-extralight'><span className='text-blue_contest italic 
               font-bold' >L</span>aky</h1>
       </div>
-       <Nav navCollapse={navCollapse} />   
+      <div className='text-lg'>
+      <Nav navCollapse={navCollapse} />   
+      </div>
+ 
     </nav> 
  
   )

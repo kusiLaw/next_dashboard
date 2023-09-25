@@ -7,7 +7,7 @@ import { FaGlobeAfrica} from 'react-icons/fa';
 const Nav = ({navCollapse = false}) => {
   return (
     <>
-      <div >
+      <div  >
            <LinkButton   link_path ='/dashboard'   id='home' > 
              <BiGridAlt/> <span className={`${navCollapse ? `hidden` : `inline` } `}> Home</span>
            </LinkButton>
@@ -15,7 +15,7 @@ const Nav = ({navCollapse = false}) => {
              <BiUser/> <span className={`${navCollapse ? `hidden` : `inline` }`}> Users</span>   
            </LinkButton>
            <LinkButton   link_path='dashboard/#' id='report'> 
-             <BiPieChartAlt/> <span className={`${navCollapse ? `hidden` : `inline` }`}>Report</span>   
+             <BiPieChartAlt/> <span className={`${navCollapse ? `hidden` : `inline` }`}>Components</span>   
            </LinkButton>
        
         </div>

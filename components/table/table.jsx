@@ -13,11 +13,11 @@ export const UserTable = ({userdata}) =>{
                             <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-light_ash_text bg-gray_bg border-gray-100
                              rounded  focus:ring-2 dark:
                               " />
-                            <label for="checkbox-all-search" className="hidden">checkbox</label>
+                            <label htmlFor="checkbox-all-search" className="hidden">checkbox</label>
                         </div>
                     </th>
                     { table_header.map( item => (
-                      <th scope="col" className="px-6 py-3 text-base">
+                      <th key={item} scope="col" className="px-6 py-3 text-base">
                           {item}
                       </th>
                     ))
@@ -25,14 +25,14 @@ export const UserTable = ({userdata}) =>{
                 </tr>
             </thead>
             <tbody>
-               { users.map(user => (
-                <tr className="bg-white border-b dar:bg-gray-800 dar:border-gray-700 hover:bg-gray-50 dar:hover:bg-gray-600">
+               { users.map((user,index )=> (
+                <tr key={user.name + index.toString()} className="bg-white border-b dar:bg-gray-800 dar:border-gray-700 hover:bg-gray-50 dar:hover:bg-gray-600">
                         <td className="w-4 p-4">
                             <div className="flex items-center">
                             <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-light_ash_text bg-gray_bg border-gray-100
                              rounded  focus:ring-2 dark:bg-inherit
                               " />
-                            <label for="checkbox-all-search" className="sr-only">checkbox</label>
+                            <label htmlFor="checkbox-all-search" className="sr-only">checkbox</label>
                             </div>
                         </td>
                         <th scope="row" className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dar:text-white">
