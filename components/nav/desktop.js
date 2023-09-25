@@ -11,7 +11,8 @@ const DesktopNav = ({navCollapse, setNavCollapse}) => {
 
   return (
 
-     <nav className={`flex flex-col ${navCollapse ? `w-[4rem]`:`w-[12rem]`} dark:text-white   bg-white dark:bg-dark_color p-4 rounded-xl drop-shadow-xl  
+     <nav className={`flex flex-col ${navCollapse ? `w-[4rem]`:`w-[12rem]`} dark:text-white   bg-white dark:bg-dark_color p-4
+      rounded-xl drop-shadow-xl  
        h-full animate-fade-right animate-delay-500  ease-in-out duration-500`} 
        onMouseLeave={() => {if (mouseControlNav)  setNavCollapse(true) }}    
        onMouseEnter={() => { if (mouseControlNav) setNavCollapse(false)  }}        >
