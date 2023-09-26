@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
    
-      <html lang="en" className='' suppressHydrationWarning>
+      <html lang="en" className='dark:bg-white' suppressHydrationWarning>
         <body className={`${inter.className}`}>
            <div className=" relative  w-full">
            <Providers  >
