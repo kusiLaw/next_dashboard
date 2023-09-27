@@ -3,7 +3,7 @@ export const UserTable = ({userdata}) =>{
  const  {table_header, users } = userdata;
 
   return(
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
+    <div className="relative overflow-x-auto  shadow-md sm:rounded-lg w-full">
     
         <table className="w-full text-sm text-left rtl:text-right  dar:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dar:bg-gray-700 dar:text-gray-400">
