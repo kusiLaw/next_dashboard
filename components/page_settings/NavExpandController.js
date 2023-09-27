@@ -12,7 +12,7 @@ const NavExpandController = () => {
  return (
   <div >
     <ToggleSwitch 
-    name = {'Nav Auto Collapse'}  
+    name = {'Navbar Auto Collapse'}  
     checked = {mouseControlNav} 
     onChangeFn ={setMouseControlNav} 
     extra = {

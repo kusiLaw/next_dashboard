@@ -1,6 +1,6 @@
 export const Loading = ()=>{
     return (
-        <div  className=" animate-pulse">
+        <div  className=" animate-pulse ">
             <table className="w-100%">
                 <tr className="flex gap-3">
                     <th className="p-3">
