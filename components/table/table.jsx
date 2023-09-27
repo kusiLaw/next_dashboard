@@ -32,14 +32,14 @@ export const UserTable = ({userdata}) =>{
                             <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-light_ash_text bg-gray_bg border-gray-100
                              rounded  focus:ring-2 dark:bg-inherit
                               " />
-                            <label htmlFor="checkbox-all-search" className="sr-only">checkbox</label>
+                            <label htmlFor="checkbox-all-search" className="hidden">checkbox</label>
                             </div>
                         </td>
                         <th scope="row" className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dar:text-white">
                             <img className="w-10 h-10 rounded-full" src={user.image} alt="Jese image" />
                             <div className="ps-3">
-                                <div className="text-base font-semibold">{user.name}</div>
-                                <div className="font-normal text-gray-500">{user.email}</div>
+                                <div className="text-base font-medium">{user.name}</div>
+                                <div className="font-light  text-gray-500">{user.email}</div>
                             </div>  
                         </th>
                         <td className="px-6 py-4"> {user.role }
