@@ -48,7 +48,6 @@ export default function Home() {
       </section>
 
       <section  className='grid py-3  gap-3 grid-cols-1 md:grid-cols-2 h-full w-full overflow-hidden  '>
-      {/* <section  className='flex flex-wrap flex-[1_1_100%] py-3   gap-3  h-full overflow-hidden  '> */}
 
         <div  className='p-2 flex justify-center items-center  w-auto  h-fit drop-shadow-xl bg-white  duration-500'>
            <AreaChart />

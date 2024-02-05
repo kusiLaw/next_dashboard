@@ -5,8 +5,8 @@ export const getDashboardLocalSettings = () => {
 
  return localStorage.getItem("dashboardDefaultSettings") || 
  `{"navMount" : "true",
- "displayToggleBtn" : "false",
- "displayNavControllerButton" : "false",
+ "displayToggleBtn" : "true",
+ "mouseControlNav" : "false",
  "navCollapse" : "false"}`;
 }
 

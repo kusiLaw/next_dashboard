@@ -1,18 +1,35 @@
 import React,{useContext} from 'react'
 import ToggleSwitch from '../toggle_switch/switch'
-import { navControllerButtonContext } from '@/app/dashboard/provider'
+import { navMouseControlContext, navCollapseContext } from '@/app/dashboard/provider'
+
 
 const NavExpandController = () => {
- const {displayNavControllerButton, setNavControllerButton} = useContext(navControllerButtonContext)
+ const {mouseControlNav, setMouseControlNav} = useContext(navMouseControlContext)
+ const {navCollapse, setNavCollapse} = useContext(navCollapseContext)
 
+ let collapse  = mouseControlNav ? false : true
 
  return (
   <div >
     <ToggleSwitch 
-    name = {'Nav Controller'}  
-    checked = {displayNavControllerButton} 
-    onChangeFn ={setNavControllerButton} 
-    extra = {{cache : true, storageKey : 'displayNavControllerButton'}}
+    name = {'Navbar Auto Collapse'}  
+    checked = {mouseControlNav} 
+    onChangeFn ={setMouseControlNav} 
+    extra = {
+              {
+                cache : true, 
+                storageKey : 'mouseControlNav', 
+                extraFn: [
+                        {
+                          fn:setNavCollapse, 
+                          args: [collapse,],
+                          cache: true,
+                          storageKey: 'navCollapse'
+                        },  
+                       ]
+              }
+          
+          } // usefull to excecute extral fn after main fn
     />
   </div>
 )

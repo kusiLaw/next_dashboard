@@ -7,14 +7,14 @@ import { Providers } from './provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next Dashboard',
+  title: 'Next.js Dashboard',
   description: 'Developed by Lawrence',
 }
 
 export default function RootLayout({ children }) {
   return (
    
-      <html lang="en" className='' suppressHydrationWarning>
+      <html lang="en" className='dark:bg-white' suppressHydrationWarning>
         <body className={`${inter.className}`}>
            <div className=" relative  w-full">
            <Providers  >
