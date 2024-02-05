@@ -5,12 +5,25 @@ const ToggleSwitch = ({onChangeFn = null, name = '', checked = false, cache = fa
   return (
     <>
        <label className='flex justify-between w-full relative self-start'>
-           <span className='font-semibold'>{ name }</span>
+           <span className='text-base'>{ name }</span>
          <input onChange={()=>{ 
           if (onChangeFn !== null) {
            onChangeFn(!checked)
            extra.cache && storeUserDefaultSettings(extra.storageKey , !checked)
           }
+
+          /**
+           *  particularly usefull if you want excecute extra funtion(s) after the main onchnage function
+           * It only runs only when extra function(s) is provided
+           */
+          extra.extraFn && async function extraFn() 
+          { 
+            extra.extraFn.forEach(async element => {
+              await element.fn(... element.args)
+              await  element.cache  && storeUserDefaultSettings(element.storageKey , element.args[0])
+            })
+          }();
+
           }}  
           type="checkbox" checked={checked} 
           className='relative h-6 w-12 cursor-pointer appearance-none rounded-full bg-gray_bg 
