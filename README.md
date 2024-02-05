@@ -91,7 +91,7 @@
 
 > Add a link to your deployed project.
 
-- ## [Live Link](https://next-dashboard-px4y4l6ow-kusilaw.vercel.app/dashboard)
+- ## [Live Link](https://next-dashboard-git-dev-kusilaw.vercel.app/)
   
 
 <!-- GETTING STARTED -->
