@@ -20,7 +20,7 @@ export const userdata = {
           email: "Lawrence@localhost.com",
           role: 'React Developer',
           online : false,
-          image: 'https://media-exp1.licdn.com/dms/image/C4D03AQHQ_PqUF0cXRw/profile-displayphoto-shrink_800_800/0/1550872145705?e=2147483647&v=beta&t=3do2Wgl7vpD_oR2GIEeIpxihPzkA37ipWofmit1NRdo'
+          image: 'https://embed.widencdn.net/img/kelleyiu/athtscmlkn/320x320px/KSBRyanMarchenko_20220127_002.jpg?keep=n&crop=yes'
         },
         {
           name : 'florence Tember',
@@ -43,7 +43,7 @@ export const userdata = {
           email: "Lawrence@localhost.com",
           role: 'React Developer',
           online : false,
-          image: 'https://th.bing.com/th/id/OIP.Od6cXskABJg0xWsABH536QAAAA?rs=1&pid=ImgDetMain'
+          image: 'https://profile-images.xing.com/images/4ae2612933f99e6509fece8939d2f138-1/mathias-renz.1024x1024.jpg'
         },
         {
           name : 'florence Tember',
