@@ -10,7 +10,7 @@ const LinkButton = (props) => {
   const activeLink = pathname === link_path ? 'active [&.active]:bg-blue_contest [&.active]:drop-shadow-lg [&.active]:text-white [&.active]:dark:bg-dark_color_hover' : ''
 
   return (
-   <Link href={link_path}   className={`nav flex  w-full  items-center h-10  px-2 text-lg rounded-xl
+   <Link href={link_path}   className={`nav flex  w-full  items-center h-10  px-2 text-base rounded-xl
       bg-inherit text-light_ash_text dark:text-white ${activeLink}  overflow-hidden truncate
     hover:bg-blue_contest hover:text-white hover:dark:bg-dark_color_hover hover:dark:text-white`}>
       
